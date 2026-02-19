@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{BLOG_TITLE}} | スプリング☆ユニバース</title>
+  <meta property="og:title" content="{{BLOG_TITLE}}">
+  <meta property="og:description" content="{{BLOG_DESC}}">
+  <link rel="stylesheet" href="../../assets/css/comedy-zine.css">
+</head>
+<body>
+
+  <div class="zine-container">
+
+    <!-- ヘッダー -->
+    <header class="zine-header">
+      <div class="zine-site-title">✦ SPRING☆UNIVERSE ✦</div>
+      <nav class="zine-nav">
+        <a href="../../index.html">[ TOP ]</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- パンくずナビ -->
+      <div class="zine-breadcrumb">
+        <a href="../../index.html">🏠 HOME</a>
+        <span class="zine-sep">&gt;</span>
+        <span>{{BLOG_TITLE}}</span>
+      </div>
+
+      <!-- ブログヘッダー -->
+      <div class="zine-blog-header">
+        <span class="zine-blog-emoji">{{BLOG_EMOJI}}</span>
+        <div class="zine-blog-title">{{BLOG_TITLE}}</div>
+        <p class="zine-blog-desc">{{BLOG_DESC}}</p>
+        <p class="zine-blog-meta">✍️ {{BLOG_AUTHOR}} | 🪐 {{PLANET_JA}} ({{PLANET_EN}})</p>
+        <hr class="zine-divider">
+        <p class="zine-stats">
+          📋 記事数: <span class="zine-accent">{{POST_COUNT}}</span> |
+          🆕 最終更新: <span class="zine-accent">{{LATEST_DATE}}</span>
+        </p>
+      </div>
+
+      <!-- タグフィルター -->
+      {{TAG_FILTER}}
+
+      <!-- 記事一覧 -->
+      <div class="zine-section">
+        <div class="zine-section-heading">◆ CONTENTS ({{POST_COUNT}}本)</div>
+        {{POST_LIST}}
+      </div>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="zine-footer">
+      <p>© 2026 SPRING☆UNIVERSE | COMEDY ZINE</p>
+    </footer>
+
+  </div>
+  <script src="../../assets/js/tag-filter.js"></script>
+</body>
+</html>

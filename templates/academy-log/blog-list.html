@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{BLOG_TITLE}} | スプリング☆ユニバース</title>
+  <meta property="og:title" content="{{BLOG_TITLE}}">
+  <meta property="og:description" content="{{BLOG_DESC}}">
+  <link rel="stylesheet" href="../../assets/css/academy-log.css">
+</head>
+<body>
+
+  <div class="academy-container">
+
+    <!-- ヘッダー -->
+    <header class="academy-header">
+      <div class="academy-site-title">SPRING ☆ UNIVERSE</div>
+      <nav class="academy-nav">
+        <a href="../../index.html">[ TOP ]</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- パンくずナビ -->
+      <div class="academy-breadcrumb">
+        <a href="../../index.html">🏠 HOME</a>
+        <span class="academy-sep">/</span>
+        <span>{{BLOG_TITLE}}</span>
+      </div>
+
+      <!-- ブログヘッダー -->
+      <div class="academy-blog-header">
+        <span class="academy-blog-emoji">{{BLOG_EMOJI}}</span>
+        <div class="academy-blog-title">{{BLOG_TITLE}}</div>
+        <p class="academy-blog-desc">{{BLOG_DESC}}</p>
+        <p class="academy-blog-meta">✍️ {{BLOG_AUTHOR}} | 🪐 {{PLANET_JA}} ({{PLANET_EN}})</p>
+        <div class="academy-divider"></div>
+        <p class="academy-stats">
+          📋 記録数: <span class="academy-accent">{{POST_COUNT}}</span> |
+          🆕 最終更新: <span class="academy-accent">{{LATEST_DATE}}</span>
+        </p>
+      </div>
+
+      <!-- タグフィルター -->
+      {{TAG_FILTER}}
+
+      <!-- 記事一覧 -->
+      <div class="academy-section">
+        <div class="academy-section-heading">◆ REPORT LOG ({{POST_COUNT}} entries)</div>
+        {{POST_LIST}}
+      </div>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="academy-footer">
+      <p>© 2026 Spring☆Universe | Academy Log</p>
+    </footer>
+
+  </div>
+  <script src="../../assets/js/tag-filter.js"></script>
+</body>
+</html>

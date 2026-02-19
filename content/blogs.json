@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "ren-kawase",
+    "title": "レン・カワセのスピ☆オンセン",
+    "desc": "温泉と天文を愛する研究員の観測日誌",
+    "author": "レン・カワセ",
+    "theme": "onsen-cosmos",
+    "planet": { "emoji": "☿️", "color": "#a0a0a0", "nameJa": "水星", "name": "Mercury" }
+  },
+  {
+    "slug": "jarujaru",
+    "title": "今日のジャルジャル",
+    "desc": "お笑いネタを真剣に批評する日記",
+    "author": "ジャルジャル研究員",
+    "theme": "comedy-zine",
+    "planet": { "emoji": "♀️", "color": "#ffd700", "nameJa": "金星", "name": "Venus" }
+  },
+  {
+    "slug": "setoshun-illust",
+    "title": "セトシュンのイラスト成長日記",
+    "desc": "下手くそから脱却するための記録",
+    "author": "セトシュン",
+    "theme": "word-retro",
+    "planet": { "emoji": "🌍", "color": "#4169e1", "nameJa": "地球", "name": "Earth" }
+  },
+  {
+    "slug": "nakata-muscle",
+    "title": "ナカタのガチムチ日記",
+    "desc": "筋トレと栄養学の実践レポート",
+    "author": "ナカタ",
+    "theme": "gym-log",
+    "planet": { "emoji": "♂️", "color": "#ff4444", "nameJa": "火星", "name": "Mars" }
+  },
+  {
+    "slug": "umemura-love",
+    "title": "ウメムラのレンアイマスター",
+    "desc": "恋愛工学を科学的に検証する",
+    "author": "ウメムラ",
+    "theme": "love-column",
+    "planet": { "emoji": "♃", "color": "#ff8c00", "nameJa": "木星", "name": "Jupiter" }
+  },
+  {
+    "slug": "ishida-sake",
+    "title": "イシダの酒・つまみ品評",
+    "desc": "日本酒とおつまみのペアリング研究",
+    "author": "イシダ",
+    "theme": "sake-modern",
+    "planet": { "emoji": "🪐", "color": "#f4a460", "nameJa": "土星", "name": "Saturn" }
+  },
+  {
+    "slug": "tonai-kitchen",
+    "title": "tonai's kitchen",
+    "desc": "料理実験室 - 失敗も成功も全て記録",
+    "author": "トナイ",
+    "theme": "retro-cosmic",
+    "planet": { "emoji": "⛢", "color": "#4fd5d5", "nameJa": "天王星", "name": "Uranus" }
+  },
+  {
+    "slug": "sudako-bluearchive",
+    "title": "スダコのブルアカ日誌",
+    "desc": "ブルーアーカイブ攻略と考察",
+    "author": "スダコ",
+    "theme": "academy-log",
+    "planet": { "emoji": "♆", "color": "#1e90ff", "nameJa": "海王星", "name": "Neptune" }
+  },
+  {
+    "slug": "overseas-travel",
+    "title": "海外渡航日記",
+    "desc": "研究員たちの海外遠征記録",
+    "author": "渡航班",
+    "theme": "terminal",
+    "planet": { "emoji": "⚶", "color": "#9370db", "nameJa": "冥王星（準惑星）", "name": "Pluto" }
+  },
+  {
+    "slug": "kawase-onsen",
+    "title": "北の湯と星めぐり",
+    "desc": "北海道の温泉と天文を巡る旅",
+    "author": "レン・カワセ",
+    "theme": "kawase-blog",
+    "planet": { "emoji": "🌙", "color": "#667db6", "nameJa": "月", "name": "Moon" }
+  }
+]

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{POST_TITLE}} | {{BLOG_TITLE}} | スプリング☆ユニバース</title>
+  <meta property="og:title" content="{{POST_TITLE}}">
+  <meta property="og:description" content="{{POST_EXCERPT}}">
+  <link rel="stylesheet" href="../../../assets/css/word-retro.css">
+</head>
+<body>
+  <div style="padding: 20px; min-height: 100vh;">
+    <div class="word-document">
+
+      <!-- ヘッダー -->
+      <div class="word-page-header">
+        <h1 class="word-doc-title">レン・カワセの<br>スプリング☆ユニバース</h1>
+        <p class="word-doc-subtitle">研究室メンバーのブログポータル</p>
+      </div>
+      <div class="word-section-break"></div>
+
+      <main>
+
+        <!-- パンくずナビ -->
+        <div class="word-breadcrumb">
+          <a href="../../../index.html" class="word-hyperlink">🏠 ホーム</a>
+          <span class="word-breadcrumb-separator">/</span>
+          <a href="../index.html" class="word-hyperlink">{{BLOG_TITLE}}</a>
+          <span class="word-breadcrumb-separator">/</span>
+          <span class="word-text-gray">{{POST_TITLE}}</span>
+        </div>
+
+        <!-- 記事本体 -->
+        <article>
+          <header style="margin-bottom:30px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:15px">
+              <span style="font-size:3rem">{{BLOG_EMOJI}}</span>
+              <span class="word-text-gray" style="font-size:0.9rem">{{BLOG_TITLE}}</span>
+            </div>
+            <h1 class="word-h1" style="margin-top:0">{{POST_TITLE}}</h1>
+            <div style="font-size:0.9rem;color:#666;margin-bottom:12px">
+              📅 {{POST_DATE}} | ✍️ {{POST_AUTHOR}}
+            </div>
+            <div style="margin-bottom:15px">{{POST_TAGS}}</div>
+            <div class="word-separator"></div>
+          </header>
+
+          <!-- 本文 -->
+          <div class="post-content" style="margin-bottom:40px">
+            {{POST_CONTENT}}
+          </div>
+
+          <footer>
+            <div class="word-separator" style="margin-bottom:20px"></div>
+            <div class="word-info-panel" style="text-align:center;margin-bottom:30px">
+              <p style="margin:0 0 8px">
+                この記事は <span class="word-bold word-text-blue">{{POST_AUTHOR}}</span> が執筆しました。
+              </p>
+              <p style="margin:0;font-size:0.85rem;color:#666">
+                ※ 記事内容は執筆者の個人的見解であり、所属組織の公式見解ではありません。
+              </p>
+            </div>
+
+            <!-- 前後記事ナビ -->
+            <div class="post-nav-grid">
+              {{PREV_POST}}
+              {{NEXT_POST}}
+            </div>
+
+            <div style="text-align:center">
+              <a href="../index.html" class="word-button">📚 {{BLOG_TITLE}} の一覧に戻る</a>
+            </div>
+          </footer>
+        </article>
+
+      </main>
+
+      <div class="word-footer">
+        <p>© 2026 レン・カワセのスプリング☆ユニバース</p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

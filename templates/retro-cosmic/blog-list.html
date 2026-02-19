@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{BLOG_TITLE}} | スプリング☆ユニバース</title>
+  <meta property="og:title" content="{{BLOG_TITLE}}">
+  <meta property="og:description" content="{{BLOG_DESC}}">
+  <link rel="stylesheet" href="../../assets/css/retro-cosmic.css">
+</head>
+<body class="space-bg">
+
+  <div class="cosmic-container">
+
+    <!-- ヘッダー -->
+    <header class="cosmic-header">
+      <div class="cosmic-site-title neon-text">✦ SPRING☆UNIVERSE ✦</div>
+      <nav class="cosmic-nav">
+        <a href="../../index.html" class="retro-link">[ TOP ]</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- パンくずナビ -->
+      <div class="cosmic-breadcrumb">
+        <a href="../../index.html" class="retro-link">🏠 HOME</a>
+        <span class="cosmic-sep"> &gt; </span>
+        <span>{{BLOG_TITLE}}</span>
+      </div>
+
+      <!-- ブログヘッダー -->
+      <div class="retro-panel cosmic-blog-header">
+        <div class="cosmic-blog-emoji">{{BLOG_EMOJI}}</div>
+        <h1 class="cosmic-blog-title neon-text">{{BLOG_TITLE}}</h1>
+        <p class="cosmic-blog-desc">{{BLOG_DESC}}</p>
+        <p class="cosmic-blog-meta">✍️ {{BLOG_AUTHOR}} | 🪐 {{PLANET_JA}} ({{PLANET_EN}})</p>
+        <div class="retro-separator" style="margin:12px 0"></div>
+        <p class="cosmic-stats">
+          📝 記事数: <span class="cosmic-accent">{{POST_COUNT}}</span> |
+          🆕 最終更新: <span class="cosmic-accent">{{LATEST_DATE}}</span>
+        </p>
+      </div>
+
+      <!-- タグフィルター -->
+      {{TAG_FILTER}}
+
+      <!-- 記事一覧 -->
+      <div class="cosmic-section">
+        <div class="cosmic-section-heading">
+          <span class="neon-text">◆ 記事一覧 ({{POST_COUNT}}件)</span>
+        </div>
+        {{POST_LIST}}
+      </div>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="cosmic-footer">
+      <div class="retro-separator"></div>
+      <p>© 2026 レン・カワセのスプリング☆ユニバース</p>
+      <p style="font-size:0.8rem;opacity:0.6">掲載内容は各執筆者の個人的見解です</p>
+    </footer>
+
+  </div>
+  <script src="../../assets/js/tag-filter.js"></script>
+</body>
+</html>

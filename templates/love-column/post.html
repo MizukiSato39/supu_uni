@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{POST_TITLE}} | {{BLOG_TITLE}} | スプリング☆ユニバース</title>
+  <meta property="og:title" content="{{POST_TITLE}}">
+  <meta property="og:description" content="{{POST_EXCERPT}}">
+  <link rel="stylesheet" href="../../../assets/css/love-column.css">
+</head>
+<body>
+
+  <div class="love-container">
+
+    <!-- ヘッダー -->
+    <header class="love-header">
+      <div class="love-site-title">SPRING ☆ UNIVERSE</div>
+      <nav class="love-nav">
+        <a href="../../../index.html">トップへ戻る</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- パンくずナビ -->
+      <div class="love-breadcrumb">
+        <a href="../../../index.html">🏠 ホーム</a>
+        <span class="love-sep">/</span>
+        <a href="../index.html">{{BLOG_TITLE}}</a>
+        <span class="love-sep">/</span>
+        <span>{{POST_TITLE}}</span>
+      </div>
+
+      <!-- 記事本体 -->
+      <article>
+        <header style="margin-bottom: 28px; text-align: center;">
+          <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:14px">
+            <span style="font-size:2.5rem">{{BLOG_EMOJI}}</span>
+            <span style="font-size:0.88rem;color:#c0b0b5;letter-spacing:0.1em">{{BLOG_TITLE}}</span>
+          </div>
+          <h1 class="love-post-title">{{POST_TITLE}}</h1>
+          <div class="love-post-meta">📅 {{POST_DATE}} | ✍️ {{POST_AUTHOR}}</div>
+          <div style="margin-bottom:16px">{{POST_TAGS}}</div>
+          <hr class="love-divider">
+        </header>
+
+        <!-- 本文 -->
+        <div class="post-content" style="margin-bottom:40px">
+          {{POST_CONTENT}}
+        </div>
+
+        <footer>
+          <hr class="love-divider" style="margin-bottom:20px">
+          <div class="love-author-panel">
+            <p style="margin:0 0 8px;font-size:0.95rem">
+              この記事は <span style="color:#c0304a;font-weight:600">{{POST_AUTHOR}}</span> が執筆しました。
+            </p>
+            <p style="margin:0;font-size:0.82rem;color:#c0b0b5">
+              ※ 記事内容は執筆者の個人的見解です。
+            </p>
+          </div>
+
+          <!-- 前後記事ナビ -->
+          <div class="post-nav-grid">
+            {{PREV_POST}}
+            {{NEXT_POST}}
+          </div>
+
+          <div style="text-align:center">
+            <a href="../index.html" class="love-button">📚 記事一覧へ戻る</a>
+          </div>
+        </footer>
+      </article>
+
+    </main>
+
+    <footer class="love-footer">
+      <p>© 2026 レン・カワセのスプリング☆ユニバース</p>
+    </footer>
+
+  </div>
+</body>
+</html>

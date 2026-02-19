@@ -1,0 +1,528 @@
+/* ===========================
+   スプリング☆ユニバース
+   Word 97-2003 平成レトロスタイル
+   =========================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier Prime', 'MS Gothic', monospace;
+  background-color: #e8e8e8;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===========================
+   Word ドキュメント風コンテナ
+   =========================== */
+.word-document {
+  background: #f5f5dc;
+  border: 3px solid #666;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.3), inset 1px 1px 0 rgba(255,255,255,0.5);
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+  position: relative;
+}
+
+.word-document::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
+  background: linear-gradient(to bottom, #000080, #1084d7);
+  border-radius: 3px 3px 0 0;
+}
+
+/* ===========================
+   ヘッダー
+   =========================== */
+.word-page-header {
+  border-bottom: 2px solid #999;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.word-doc-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #000080;
+  letter-spacing: 0.08em;
+  margin: 0 0 8px 0;
+  font-family: 'MS Gothic', 'Courier Prime', monospace;
+  text-shadow: 2px 2px 0 rgba(255,255,255,0.5);
+  line-height: 1.3;
+}
+
+.word-doc-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+  border-top: 1px dotted #999;
+  padding-top: 10px;
+}
+
+.word-metadata {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
+  font-family: 'Courier Prime', monospace;
+}
+
+.word-metadata p {
+  margin: 2px 0;
+}
+
+/* ===========================
+   セクション
+   =========================== */
+.word-section-break {
+  border-top: 1px dashed #999;
+  margin: 30px 0;
+  padding-top: 30px;
+}
+
+.word-section {
+  margin-bottom: 25px;
+}
+
+.word-section-heading {
+  background: #0000ff;
+  color: white;
+  padding: 5px 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  border-left: 4px solid #000080;
+  font-family: 'Courier Prime', monospace;
+}
+
+/* ===========================
+   テーブル
+   =========================== */
+.word-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+  background: white;
+  font-size: 0.95rem;
+}
+
+.word-table td, .word-table th {
+  border: 1px solid #999;
+  padding: 8px;
+  text-align: left;
+}
+
+.word-table th {
+  background: #d0d0d0;
+  font-weight: 700;
+  color: #000080;
+}
+
+.word-table tr:nth-child(odd) {
+  background: #f0f0f0;
+}
+
+.word-table tr:hover {
+  background: #e0e0ff;
+}
+
+/* ===========================
+   ブログエントリー
+   =========================== */
+.word-blog-entry {
+  background: white;
+  border: 1px solid #999;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.word-blog-entry:hover {
+  background: #fffff0;
+}
+
+.word-blog-entry-title {
+  color: #0000ff;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
+
+.word-blog-entry-title:hover {
+  color: #ff0000;
+}
+
+.word-blog-meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 8px;
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 4px;
+}
+
+.word-blog-excerpt {
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ===========================
+   ハイパーリンク
+   =========================== */
+.word-hyperlink {
+  color: #0000ff;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.word-hyperlink:hover {
+  color: #ff0000;
+}
+
+.word-hyperlink:visited {
+  color: #800080;
+}
+
+a.word-hyperlink {
+  color: #0000ff;
+}
+
+a.word-hyperlink:visited {
+  color: #800080;
+}
+
+a.word-hyperlink:hover {
+  color: #ff0000;
+}
+
+/* ===========================
+   ボタン
+   =========================== */
+.word-button {
+  background: #d0d0d0;
+  border: 2px outset #fff;
+  color: #000;
+  padding: 6px 16px;
+  font-family: 'Courier Prime', monospace;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.1s;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.word-button:hover {
+  background: #e0e0e0;
+}
+
+.word-button:active {
+  border-style: inset;
+  background: #c0c0c0;
+}
+
+/* ===========================
+   箇条書き
+   =========================== */
+.word-bullet-point {
+  margin-left: 20px;
+  margin-bottom: 8px;
+}
+
+.word-bullet-point::before {
+  content: '■ ';
+  color: #0000ff;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* ===========================
+   脚注・フッター
+   =========================== */
+.word-footnote {
+  font-size: 0.85rem;
+  color: #666;
+  border-top: 1px solid #999;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+.word-page-number {
+  text-align: center;
+  margin-top: 30px;
+  color: #999;
+  font-size: 0.9rem;
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+}
+
+.word-footer {
+  border-top: 2px solid #999;
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   見出し
+   =========================== */
+.word-h1 {
+  font-family: 'Courier Prime', monospace;
+  color: #000080;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 20px 0 10px 0;
+  border-bottom: 2px solid #000080;
+  padding-bottom: 5px;
+}
+
+.word-h2 {
+  font-family: 'Courier Prime', monospace;
+  color: #000080;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 18px 0 8px 0;
+}
+
+.word-h3 {
+  font-family: 'Courier Prime', monospace;
+  color: #000080;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 16px 0 8px 0;
+}
+
+/* ===========================
+   タグ
+   =========================== */
+.word-tag {
+  background: #e0e0e0;
+  border: 1px solid #999;
+  color: #333;
+  padding: 3px 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  font-family: 'Courier Prime', monospace;
+  cursor: pointer;
+}
+
+.word-tag:hover {
+  background: #d0d0d0;
+  border-color: #666;
+}
+
+.word-tag-active {
+  background: #0000ff;
+  color: white;
+  border-color: #000080;
+}
+
+/* ===========================
+   パネル
+   =========================== */
+.word-info-panel {
+  background: #ffffcc;
+  border: 2px solid #999;
+  padding: 12px;
+  margin: 15px 0;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.word-info-panel-title {
+  font-weight: 700;
+  color: #000080;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #999;
+  padding-bottom: 4px;
+}
+
+.word-warning-panel {
+  background: #ffe0e0;
+  border: 2px double #ff0000;
+  padding: 12px;
+  margin: 15px 0;
+}
+
+/* ===========================
+   ブログカード
+   =========================== */
+.word-blog-card {
+  background: white;
+  border: 1px solid #999;
+  padding: 12px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.word-blog-card:hover {
+  background: #e0e0ff;
+}
+
+.word-blog-card-title {
+  color: #0000ff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+/* ===========================
+   NEW バッジ
+   =========================== */
+.word-new-badge {
+  background: #ff0000;
+  color: white;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 1px solid #800000;
+  display: inline-block;
+  margin-left: 6px;
+  animation: wordBlink 1s infinite;
+}
+
+@keyframes wordBlink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0.5; }
+}
+
+/* ===========================
+   カウンター
+   =========================== */
+.word-counter {
+  background: #000;
+  color: #00ff00;
+  font-family: 'Courier Prime', monospace;
+  padding: 6px 12px;
+  border: 2px inset #808080;
+  display: inline-block;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   セパレーター
+   =========================== */
+.word-separator {
+  border-top: 1px solid #999;
+  margin: 20px 0;
+}
+
+/* ===========================
+   アイコン装飾
+   =========================== */
+.word-emoji {
+  font-size: 1.3rem;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* ===========================
+   ブレッドクラム
+   =========================== */
+.word-breadcrumb {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.word-breadcrumb-separator {
+  margin: 0 8px;
+  color: #999;
+}
+
+/* ===========================
+   テキストカラー・スタイル
+   =========================== */
+.word-text-blue  { color: #0000ff; }
+.word-text-red   { color: #ff0000; }
+.word-text-green { color: #008000; }
+.word-text-gray  { color: #666; }
+.word-bold       { font-weight: 700; }
+
+/* ===========================
+   記事本文レンダリング
+   =========================== */
+.post-content p {
+  margin: 0 0 12px 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+.post-content ul {
+  margin: 12px 0;
+  padding-left: 24px;
+}
+
+.post-content li {
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.post-content ol {
+  margin: 12px 0;
+  padding-left: 24px;
+}
+
+.post-content ol li {
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* ===========================
+   前後記事ナビゲーション グリッド
+   =========================== */
+.post-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+/* ===========================
+   スクロールバー（Windows 95/98風）
+   =========================== */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d0d0d0;
+  border: 1px solid #808080;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border: 2px outset #fff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}

@@ -1,0 +1,400 @@
+/* ===========================
+   スプリング☆ユニバース
+   IZAKAYA - 居酒屋メニュースタイル
+   =========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', '游明朝', serif;
+  background-color: #1a0f05;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 40px,
+      rgba(139, 90, 43, 0.08) 40px,
+      rgba(139, 90, 43, 0.08) 41px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 40px,
+      rgba(139, 90, 43, 0.08) 40px,
+      rgba(139, 90, 43, 0.08) 41px
+    );
+  color: #f0e6d0;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===========================
+   コンテナ
+   =========================== */
+.izakaya-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===========================
+   ヘッダー
+   =========================== */
+.izakaya-header {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 24px;
+  border-bottom: 3px solid #8b5a2b;
+  position: relative;
+}
+
+.izakaya-header::before {
+  content: '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━';
+  display: block;
+  color: #8b5a2b;
+  font-size: 0.7rem;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.izakaya-site-title {
+  font-size: 0.85rem;
+  letter-spacing: 0.4em;
+  color: #d4a058;
+  margin: 8px 0;
+  font-weight: 700;
+}
+
+.izakaya-nav a {
+  color: #d4a058;
+  text-decoration: none;
+  font-size: 0.88rem;
+  padding: 4px 12px;
+  border: 1px solid #8b5a2b;
+}
+
+.izakaya-nav a:hover { background: #8b5a2b; color: #f0e6d0; }
+
+/* ===========================
+   ブレッドクラム
+   =========================== */
+.izakaya-breadcrumb {
+  font-size: 0.85rem;
+  color: #8b6a4a;
+  margin-bottom: 18px;
+  letter-spacing: 0.08em;
+}
+
+.izakaya-breadcrumb a { color: #d4a058; text-decoration: none; }
+.izakaya-breadcrumb a:hover { color: #f0b830; }
+.izakaya-sep { margin: 0 8px; color: #5a3a1a; }
+
+/* ===========================
+   ブログヘッダー（品書き風）
+   =========================== */
+.izakaya-blog-header {
+  background: #0f0700;
+  border: 2px solid #8b5a2b;
+  padding: 28px;
+  margin-bottom: 28px;
+  text-align: center;
+  position: relative;
+}
+
+.izakaya-blog-header::before {
+  content: '〔 品書き 〕';
+  display: block;
+  font-size: 0.8rem;
+  color: #8b5a2b;
+  letter-spacing: 0.3em;
+  margin-bottom: 14px;
+}
+
+.izakaya-blog-header::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #8b5a2b, transparent);
+  margin-top: 18px;
+}
+
+.izakaya-blog-emoji { font-size: 3rem; margin-bottom: 10px; display: block; }
+
+.izakaya-blog-title {
+  font-size: 1.9rem;
+  font-weight: 900;
+  color: #f0b830;
+  letter-spacing: 0.12em;
+  margin: 0 0 10px;
+  text-shadow: 0 0 20px rgba(240, 184, 48, 0.3);
+}
+
+.izakaya-blog-desc {
+  font-size: 0.95rem;
+  color: #b08050;
+  font-style: italic;
+  margin: 0 0 12px;
+  line-height: 1.7;
+}
+
+.izakaya-blog-meta { font-size: 0.85rem; color: #7a5a3a; margin: 0 0 14px; }
+
+.izakaya-divider {
+  border: none;
+  border-top: 1px solid #3a2010;
+  margin: 14px 0;
+}
+
+.izakaya-stats { font-size: 0.9rem; color: #8b6a4a; }
+.izakaya-accent { color: #f0b830; font-weight: bold; }
+
+/* ===========================
+   セクション
+   =========================== */
+.izakaya-section { margin-bottom: 28px; }
+
+.izakaya-section-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f0b830;
+  letter-spacing: 0.3em;
+  text-align: center;
+  margin-bottom: 16px;
+  padding: 8px;
+  border-top: 1px solid #3a2010;
+  border-bottom: 1px solid #3a2010;
+}
+
+/* ===========================
+   記事カード（メニュー品目風）
+   =========================== */
+a.izakaya-post-card {
+  display: block;
+  background: #0f0700;
+  border: 1px solid #3a2010;
+  border-bottom: 2px solid #8b5a2b;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+  position: relative;
+}
+
+a.izakaya-post-card::before {
+  content: '◈';
+  position: absolute;
+  left: 8px;
+  top: 18px;
+  color: #8b5a2b;
+  font-size: 0.7rem;
+}
+
+a.izakaya-post-card:hover { background: #1a0f05; }
+
+.izakaya-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #f0e6d0;
+  margin-bottom: 6px;
+  padding-left: 14px;
+}
+
+.izakaya-card-date {
+  font-size: 0.8rem;
+  color: #7a5a3a;
+  white-space: nowrap;
+  margin-left: 12px;
+}
+
+.izakaya-card-excerpt {
+  font-size: 0.88rem;
+  color: #9a7a5a;
+  margin: 0 0 10px;
+  line-height: 1.65;
+  padding-left: 14px;
+}
+
+.izakaya-card-meta { font-size: 0.82rem; color: #7a5a3a; }
+
+/* ===========================
+   タグ
+   =========================== */
+.izakaya-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border: 1px solid #5a3a1a;
+  color: #d4a058;
+  margin: 2px;
+}
+
+.izakaya-tag-filter {
+  background: #0f0700;
+  border: 1px solid #3a2010;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+}
+
+.izakaya-tag-filter-heading {
+  font-size: 0.8rem;
+  color: #7a5a3a;
+  letter-spacing: 0.25em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+button[data-tag-btn] {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.78rem;
+  padding: 3px 10px;
+  border: 1px solid #5a3a1a;
+  background: transparent;
+  color: #d4a058;
+}
+
+button[data-tag-btn]:hover,
+button[data-tag-btn].active {
+  background: #8b5a2b;
+  border-color: #8b5a2b;
+  color: #f0e6d0;
+}
+
+/* ===========================
+   記事本文
+   =========================== */
+.post-content h1 {
+  font-size: 1.7rem;
+  color: #f0b830;
+  text-align: center;
+  margin-top: 32px;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid #3a2010;
+  padding-bottom: 10px;
+}
+
+.post-content h2 {
+  font-size: 1.2rem;
+  color: #d4a058;
+  border-left: 3px solid #8b5a2b;
+  padding-left: 10px;
+  margin-top: 28px;
+  letter-spacing: 0.08em;
+}
+
+.post-content h3 {
+  font-size: 1.05rem;
+  color: #c09050;
+  margin-top: 22px;
+  letter-spacing: 0.06em;
+}
+
+.post-content p { line-height: 1.9; color: #c8b090; margin: 0 0 16px; }
+
+.post-content ul,
+.post-content ol {
+  padding-left: 24px;
+  color: #c8b090;
+  line-height: 1.9;
+}
+
+.post-content li { margin-bottom: 5px; }
+
+/* ===========================
+   記事タイトル
+   =========================== */
+.izakaya-post-title {
+  font-size: 1.85rem;
+  font-weight: 900;
+  color: #f0b830;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin: 0 0 14px;
+  text-shadow: 0 0 12px rgba(240,184,48,0.25);
+}
+
+.izakaya-post-meta {
+  font-size: 0.88rem;
+  color: #7a5a3a;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+/* ===========================
+   前後ナビ
+   =========================== */
+.post-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 28px 0;
+}
+
+a.izakaya-nav-card {
+  display: block;
+  background: #0f0700;
+  border: 1px solid #3a2010;
+  padding: 12px 14px;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+a.izakaya-nav-card:hover { background: #1a0f05; }
+
+.izakaya-nav-label { font-size: 0.75rem; color: #7a5a3a; margin-bottom: 6px; }
+.izakaya-nav-title { font-size: 0.9rem; color: #f0e6d0; font-weight: 600; margin-bottom: 4px; }
+.izakaya-nav-date  { font-size: 0.78rem; color: #7a5a3a; }
+
+/* ===========================
+   ボタン
+   =========================== */
+.izakaya-button {
+  display: inline-block;
+  padding: 10px 28px;
+  background: #8b5a2b;
+  color: #f0e6d0;
+  font-family: inherit;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  border: 1px solid #d4a058;
+  cursor: pointer;
+}
+
+.izakaya-button:hover { background: #a06a35; }
+
+/* ===========================
+   著者パネル
+   =========================== */
+.izakaya-author-panel {
+  background: #0f0700;
+  border: 1px solid #3a2010;
+  border-top: 2px solid #8b5a2b;
+  padding: 16px;
+  text-align: center;
+  margin-bottom: 28px;
+  font-size: 0.9rem;
+  color: #9a7a5a;
+}
+
+/* ===========================
+   フッター
+   =========================== */
+.izakaya-footer {
+  border-top: 3px solid #3a2010;
+  padding-top: 18px;
+  margin-top: 32px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #5a3a1a;
+  letter-spacing: 0.2em;
+}
+
+/* ===========================
+   非表示
+   =========================== */
+.izakaya-hidden { display: none !important; }

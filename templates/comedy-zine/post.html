@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{POST_TITLE}} | {{BLOG_TITLE}} | スプリング☆ユニバース</title>
+  <meta property="og:title" content="{{POST_TITLE}}">
+  <meta property="og:description" content="{{POST_EXCERPT}}">
+  <link rel="stylesheet" href="../../../assets/css/comedy-zine.css">
+</head>
+<body>
+
+  <div class="zine-container">
+
+    <!-- ヘッダー -->
+    <header class="zine-header">
+      <div class="zine-site-title">✦ SPRING☆UNIVERSE ✦</div>
+      <nav class="zine-nav">
+        <a href="../../../index.html">[ TOP ]</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- パンくずナビ -->
+      <div class="zine-breadcrumb">
+        <a href="../../../index.html">🏠 HOME</a>
+        <span class="zine-sep">&gt;</span>
+        <a href="../index.html">{{BLOG_TITLE}}</a>
+        <span class="zine-sep">&gt;</span>
+        <span>{{POST_TITLE}}</span>
+      </div>
+
+      <!-- 記事本体 -->
+      <article>
+        <header style="margin-bottom:24px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <span style="font-size:2.5rem">{{BLOG_EMOJI}}</span>
+            <span style="font-size:0.85rem;font-weight:700;color:#555;letter-spacing:0.1em">{{BLOG_TITLE}}</span>
+          </div>
+          <h1 class="zine-post-title">{{POST_TITLE}}</h1>
+          <div class="zine-post-meta">📅 {{POST_DATE}} | ✍️ {{POST_AUTHOR}}</div>
+          <div style="margin-bottom:14px">{{POST_TAGS}}</div>
+          <hr class="zine-divider">
+        </header>
+
+        <!-- 本文 -->
+        <div class="post-content" style="margin-bottom:40px">
+          {{POST_CONTENT}}
+        </div>
+
+        <footer>
+          <hr class="zine-divider" style="margin-bottom:20px">
+          <div class="zine-author-panel">
+            <p style="margin:0 0 6px;font-weight:900">
+              執筆: {{POST_AUTHOR}}
+            </p>
+            <p style="margin:0;font-size:0.82rem;color:#555">
+              ※ 記事内容は執筆者の個人的見解です。
+            </p>
+          </div>
+
+          <!-- 前後記事ナビ -->
+          <div class="post-nav-grid">
+            {{PREV_POST}}
+            {{NEXT_POST}}
+          </div>
+
+          <div style="text-align:center">
+            <a href="../index.html" class="zine-button">← BACK TO ZINE</a>
+          </div>
+        </footer>
+      </article>
+
+    </main>
+
+    <footer class="zine-footer">
+      <p>© 2026 SPRING☆UNIVERSE | COMEDY ZINE</p>
+    </footer>
+
+  </div>
+</body>
+</html>

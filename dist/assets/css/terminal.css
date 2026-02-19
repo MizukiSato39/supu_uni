@@ -1,0 +1,212 @@
+/* ===========================
+   Terminal テーマ
+   観測ログ・端末スタイル
+   =========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  background-color: #0a0a0a;
+  color: #00cc00;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* コンテナ */
+.term-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* ヘッダー */
+.term-header {
+  border-bottom: 1px solid #00cc00;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+.term-prompt {
+  font-size: 0.85rem;
+  color: #009900;
+  margin-bottom: 8px;
+}
+.term-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #00ff00;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 8px rgba(0,255,0,0.5);
+}
+.term-nav {
+  margin-top: 8px;
+  display: flex;
+  gap: 20px;
+}
+
+/* リンク */
+.term-link {
+  color: #00cc00;
+  text-decoration: underline;
+  transition: color 0.15s;
+}
+.term-link:hover { color: #00ff00; text-shadow: 0 0 6px rgba(0,255,0,0.7); }
+.term-link:visited { color: #008800; }
+
+/* ボタン */
+.term-button {
+  display: inline-block;
+  background: #001400;
+  border: 1px solid #00cc00;
+  color: #00cc00;
+  padding: 8px 18px;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.9rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.term-button:hover {
+  background: #002800;
+  color: #00ff00;
+  box-shadow: 0 0 8px rgba(0,255,0,0.3);
+}
+
+/* カーソル点滅 */
+.term-blink {
+  animation: termBlink 1s step-end infinite;
+}
+@keyframes termBlink {
+  0%,100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
+/* パンくず */
+.term-breadcrumb {
+  font-size: 0.9rem;
+  color: #009900;
+  margin-bottom: 16px;
+}
+.term-sep { margin: 0 4px; color: #005500; }
+.term-current { color: #00ff00; }
+
+/* ブロック（コマンド＋出力） */
+.term-block {
+  border: 1px solid #003300;
+  margin-bottom: 16px;
+}
+.term-block-header {
+  background: #001a00;
+  border-bottom: 1px solid #003300;
+  padding: 6px 12px;
+  font-size: 0.88rem;
+}
+.term-block-body {
+  padding: 12px;
+}
+
+/* コマンド表示 */
+.term-cmd {
+  color: #00ff00;
+  font-weight: 700;
+}
+.term-comment { color: #005500; font-weight: 400; }
+
+/* Frontmatter表示 */
+.term-frontmatter { color: #009900; }
+.term-key { color: #00ff00; font-weight: 700; display: inline-block; min-width: 120px; }
+
+/* テキスト */
+.term-line { margin-bottom: 4px; line-height: 1.5; }
+.term-dim   { color: #005500; }
+.term-mini-prompt { color: #005500; margin-right: 6px; }
+
+/* 記事リスト（ls -lt 風） */
+.term-post-entry {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 6px 0;
+  border-bottom: 1px dotted #002200;
+  transition: background 0.15s;
+}
+.term-post-entry:hover { background: #001a00; padding-left: 4px; }
+.term-post-entry:last-child { border-bottom: none; }
+
+.term-post-date    { color: #006600; font-size: 0.85rem; display: inline-block; min-width: 100px; }
+.term-post-author  { color: #008800; font-size: 0.85rem; display: inline-block; min-width: 120px; }
+.term-post-title   { color: #00cc00; text-decoration: underline; }
+.term-post-title:hover { color: #00ff00; }
+.term-post-excerpt { color: #006600; font-size: 0.85rem; margin: 4px 0 6px 100px; }
+.term-post-tags    { margin: 0 0 4px 100px; }
+
+/* タグ */
+.term-tag {
+  background: transparent;
+  border: 1px solid #005500;
+  color: #009900;
+  padding: 1px 6px;
+  font-size: 0.8rem;
+  display: inline-block;
+  margin: 2px 3px 2px 0;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: 'Courier Prime', monospace;
+}
+.term-tag:hover, .term-tag-active {
+  border-color: #00cc00;
+  color: #00ff00;
+  background: #001a00;
+}
+
+/* タグフィルター */
+.term-tag-filter { margin-bottom: 16px; }
+.term-prompt-mini { color: #005500; margin-right: 6px; font-size: 0.85rem; }
+
+/* 記事本文 */
+.term-post-body { color: #00aa00; line-height: 1.7; }
+.term-post-body h1 { color: #00ff00; font-size: 1.4rem; border-bottom: 1px solid #003300; padding-bottom: 4px; margin: 16px 0 10px; }
+.term-post-body h2 { color: #00cc00; font-size: 1.2rem; margin: 14px 0 8px; }
+.term-post-body h2::before { content: "## "; color: #005500; }
+.term-post-body h3 { color: #009900; font-size: 1.1rem; margin: 12px 0 6px; }
+.term-post-body h3::before { content: "### "; color: #005500; }
+.term-post-body p  { margin: 0 0 10px; }
+.term-post-body ul { margin: 8px 0; padding-left: 0; list-style: none; }
+.term-post-body ul li::before { content: "$ "; color: #005500; }
+.term-post-body li { margin-bottom: 4px; }
+.term-post-body ol { margin: 8px 0; padding-left: 20px; }
+
+/* 前後ナビ */
+.post-nav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.term-nav-card {
+  display: block;
+  border: 1px solid #003300;
+  padding: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.15s;
+}
+.term-nav-card:hover { border-color: #00cc00; background: #001a00; }
+.term-nav-label { font-size: 0.8rem; color: #005500; margin-bottom: 4px; }
+.term-nav-title { color: #00cc00; font-size: 0.9rem; font-weight: 700; }
+.term-nav-date  { font-size: 0.8rem; color: #005500; margin-top: 4px; }
+
+/* フッター */
+.term-footer {
+  border-top: 1px solid #003300;
+  margin-top: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/* NEW バッジ */
+.term-new-badge {
+  color: #00ff00;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-left: 6px;
+  animation: termBlink 0.8s infinite;
+}

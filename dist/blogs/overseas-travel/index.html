@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>海外渡航日記 | スプリング☆ユニバース</title>
+  <meta property="og:title" content="海外渡航日記">
+  <meta property="og:description" content="研究員たちの海外遠征記録">
+  <link rel="stylesheet" href="../../assets/css/terminal.css">
+</head>
+<body>
+
+  <div class="term-container">
+
+    <!-- ヘッダー -->
+    <header class="term-header">
+      <div class="term-prompt">user@spring-universe:~$ <span class="term-blink">▌</span></div>
+      <div class="term-title">SPRING☆UNIVERSE BLOG PORTAL</div>
+      <nav class="term-nav">
+        <a href="../../index.html" class="term-link">cd ~</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- パンくずナビ -->
+      <div class="term-breadcrumb">
+        <span class="term-prompt-mini">$</span>
+        <a href="../../index.html" class="term-link">~</a>
+        <span class="term-sep">/</span>
+        <span class="term-current">overseas-travel</span>
+      </div>
+
+      <!-- ブログ情報 -->
+      <div class="term-block">
+        <div class="term-block-header">
+          <span class="term-cmd">cat blog.info</span>
+        </div>
+        <div class="term-block-body">
+          <div class="term-line"><span class="term-key">BLOG_NAME</span>  = "海外渡航日記"</div>
+          <div class="term-line"><span class="term-key">AUTHOR</span>     = "渡航班"</div>
+          <div class="term-line"><span class="term-key">DESCRIPTION</span>= "研究員たちの海外遠征記録"</div>
+          <div class="term-line"><span class="term-key">PLANET</span>     = "冥王星（準惑星） (Pluto)"</div>
+          <div class="term-line"><span class="term-key">POST_COUNT</span> = 2</div>
+          <div class="term-line"><span class="term-key">LAST_UPDATE</span>= "Thu Feb 12"</div>
+        </div>
+      </div>
+
+      <!-- タグフィルター -->
+      <div class="term-tag-filter term-block" style="padding:10px">
+  <span class="term-prompt-mini">$</span> grep --tag:
+  <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px"><button data-tag-btn="__all__" class="term-tag term-tag-active">*</button><button data-tag-btn="韓国" class="term-tag">#韓国</button><button data-tag-btn="ソウル" class="term-tag">#ソウル</button><button data-tag-btn="海外" class="term-tag">#海外</button><button data-tag-btn="グルメ" class="term-tag">#グルメ</button><button data-tag-btn="街歩き" class="term-tag">#街歩き</button><button data-tag-btn="準備" class="term-tag">#準備</button><button data-tag-btn="チェックリスト" class="term-tag">#チェックリスト</button><button data-tag-btn="アジア" class="term-tag">#アジア</button><button data-tag-btn="旅行術" class="term-tag">#旅行術</button></div>
+</div>
+
+      <!-- 記事一覧 -->
+      <div class="term-block">
+        <div class="term-block-header">
+          <span class="term-cmd">ls -lt posts/ <span class="term-comment"># 2 entries</span></span>
+        </div>
+        <div class="term-block-body">
+          <a href="posts/2026-02-12-seoul-report.html" class="term-post-entry" data-post-tags="韓国,ソウル,海外,グルメ,街歩き">
+  <span class="term-post-date">Thu Feb 12</span>
+  <span class="term-post-author">渡航班</span>
+  <span class="term-post-title">ソウル遠征レポート 2026年2月</span>
+  <div class="term-post-excerpt">研究室メンバー4人で2泊3日のソウル遠征。食事・移動・コスト・失敗談を全部まとめた実用レポート。</div>
+  <div class="term-post-tags"><span class="term-tag">#韓国</span><span class="term-tag">#ソウル</span><span class="term-tag">#海外</span><span class="term-tag">#グルメ</span><span class="term-tag">#街歩き</span></div>
+</a>
+<a href="posts/2026-01-30-travel-prep-checklist.html" class="term-post-entry" data-post-tags="準備,チェックリスト,アジア,旅行術">
+  <span class="term-post-date">Fri Jan 30</span>
+  <span class="term-post-author">渡航班</span>
+  <span class="term-post-title">海外渡航の準備チェックリスト（アジア短期向け）</span>
+  <div class="term-post-excerpt">毎回バタバタする渡航準備を標準化した。パスポート・通信・保険・お金の4項目に整理してまとめた。</div>
+  <div class="term-post-tags"><span class="term-tag">#準備</span><span class="term-tag">#チェックリスト</span><span class="term-tag">#アジア</span><span class="term-tag">#旅行術</span></div>
+</a>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="term-footer">
+      <div class="term-line term-dim">© 2026 Spring☆Universe | MIT License</div>
+      <div class="term-prompt-mini">$ <span class="term-blink">▌</span></div>
+    </footer>
+
+  </div>
+  <script src="../../assets/js/tag-filter.js"></script>
+</body>
+</html>

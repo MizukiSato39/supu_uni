@@ -1,0 +1,13 @@
+{
+  "name": "spring-universe",
+  "version": "1.0.0",
+  "description": "レン・カワセのスプリング☆ユニバース - 研究室ブログポータル",
+  "type": "module",
+  "scripts": {
+    "build":   "node scripts/build.mjs",
+    "preview": "node -e \"const h=require('http'),fs=require('fs'),p=require('path');const s=h.createServer((q,r)=>{let f=p.join('dist',q.url==='/'?'index.html':q.url);if(fs.existsSync(f)&&fs.statSync(f).isDirectory())f=p.join(f,'index.html');if(!fs.existsSync(f))f='dist/404.html';const m={'html':'text/html','css':'text/css','js':'text/javascript'};r.setHeader('Content-Type',m[f.split('.').pop()]||'text/plain');r.end(fs.readFileSync(f))});s.listen(3000,()=>console.log('Preview: http://localhost:3000'));\""
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}

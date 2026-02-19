@@ -1,0 +1,354 @@
+/* ===========================
+   スプリング☆ユニバース
+   GYM LOG - トレーニング記録スタイル
+   =========================== */
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Courier Prime', 'MS Gothic', monospace;
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===========================
+   コンテナ
+   =========================== */
+.gym-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===========================
+   ヘッダー
+   =========================== */
+.gym-header {
+  background: linear-gradient(135deg, #1a1a1a, #2a0000);
+  border: 2px solid #ff4400;
+  border-bottom: 4px solid #ff4400;
+  padding: 16px 24px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(255, 68, 0, 0.3);
+}
+
+.gym-site-title {
+  font-size: 1rem;
+  font-weight: 900;
+  color: #ff4400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.gym-nav a {
+  color: #ff8800;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  border: 1px solid #ff8800;
+  padding: 4px 10px;
+}
+
+.gym-nav a:hover { background: #ff8800; color: #000; }
+
+/* ===========================
+   ブレッドクラム
+   =========================== */
+.gym-breadcrumb {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+
+.gym-breadcrumb a { color: #ff8800; text-decoration: none; }
+.gym-breadcrumb a:hover { color: #ff4400; }
+.gym-sep { color: #444; margin: 0 6px; }
+
+/* ===========================
+   ブログヘッダーパネル
+   =========================== */
+.gym-blog-header {
+  background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
+  border: 2px solid #ff4400;
+  border-left: 6px solid #ff4400;
+  padding: 24px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gym-blog-header::after {
+  content: 'TRAINING LOG';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  font-size: 0.7rem;
+  color: #333;
+  letter-spacing: 0.3em;
+  font-weight: 900;
+}
+
+.gym-blog-emoji { font-size: 3rem; margin-bottom: 10px; }
+
+.gym-blog-title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #ff4400;
+  letter-spacing: 0.05em;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255, 68, 0, 0.5);
+}
+
+.gym-blog-desc { color: #aaa; font-size: 0.95rem; margin: 0 0 10px; }
+
+.gym-blog-meta { font-size: 0.85rem; color: #666; margin: 0 0 14px; }
+
+.gym-divider {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 14px 0;
+}
+
+.gym-stats { font-size: 0.9rem; color: #888; }
+.gym-accent { color: #ff8800; font-weight: bold; }
+
+/* ===========================
+   セクション
+   =========================== */
+.gym-section { margin-bottom: 28px; }
+
+.gym-section-heading {
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #ff4400;
+  border-left: 3px solid #ff4400;
+  padding-left: 10px;
+  margin-bottom: 14px;
+}
+
+/* ===========================
+   記事カード
+   =========================== */
+a.gym-post-card {
+  display: block;
+  background: #111;
+  border: 1px solid #222;
+  border-left: 4px solid #ff4400;
+  padding: 16px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+a.gym-post-card:hover {
+  background: #1a1a1a;
+  border-left-color: #ff8800;
+  box-shadow: 0 0 12px rgba(255, 68, 0, 0.2);
+}
+
+.gym-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #f0f0f0;
+  margin-bottom: 6px;
+}
+
+.gym-card-date {
+  font-size: 0.82rem;
+  color: #555;
+  white-space: nowrap;
+  margin-left: 12px;
+}
+
+.gym-card-excerpt {
+  font-size: 0.88rem;
+  color: #888;
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+
+.gym-card-meta { font-size: 0.82rem; color: #555; }
+
+/* ===========================
+   タグ
+   =========================== */
+.gym-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 2px 7px;
+  border: 1px solid #333;
+  color: #ff8800;
+  margin: 2px;
+  letter-spacing: 0.05em;
+}
+
+.gym-tag-filter {
+  background: #111;
+  border: 1px solid #222;
+  padding: 14px;
+  margin-bottom: 20px;
+}
+
+.gym-tag-filter-heading {
+  font-size: 0.78rem;
+  color: #555;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+button[data-tag-btn] {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.78rem;
+  padding: 3px 9px;
+  border: 1px solid #333;
+  background: transparent;
+  color: #ff8800;
+  letter-spacing: 0.05em;
+}
+
+button[data-tag-btn]:hover,
+button[data-tag-btn].active {
+  background: #ff4400;
+  border-color: #ff4400;
+  color: #000;
+}
+
+/* ===========================
+   記事本文
+   =========================== */
+.post-content h1 {
+  font-size: 1.6rem;
+  color: #ff4400;
+  border-bottom: 2px solid #ff4400;
+  padding-bottom: 8px;
+  margin-top: 32px;
+  text-shadow: 0 0 8px rgba(255,68,0,0.3);
+}
+
+.post-content h2 {
+  font-size: 1.25rem;
+  color: #ff8800;
+  border-left: 3px solid #ff8800;
+  padding-left: 10px;
+  margin-top: 28px;
+}
+
+.post-content h3 {
+  font-size: 1.05rem;
+  color: #ffaa00;
+  margin-top: 22px;
+}
+
+.post-content p { line-height: 1.75; color: #ccc; margin: 0 0 14px; }
+
+.post-content ul,
+.post-content ol {
+  padding-left: 22px;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.post-content li { margin-bottom: 4px; }
+
+/* ===========================
+   記事ヘッダー
+   =========================== */
+.gym-post-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #ff4400;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 10px rgba(255,68,0,0.4);
+  margin: 0 0 12px;
+}
+
+.gym-post-meta { font-size: 0.9rem; color: #555; margin-bottom: 14px; }
+
+/* ===========================
+   前後ナビ
+   =========================== */
+.post-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+a.gym-nav-card {
+  display: block;
+  background: #111;
+  border: 1px solid #222;
+  border-top: 3px solid #ff4400;
+  padding: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+a.gym-nav-card:hover { background: #1a1a1a; }
+
+.gym-nav-label { font-size: 0.75rem; color: #555; letter-spacing: 0.1em; margin-bottom: 5px; }
+.gym-nav-title { font-size: 0.9rem; color: #f0f0f0; font-weight: 600; margin-bottom: 4px; }
+.gym-nav-date  { font-size: 0.78rem; color: #555; }
+
+/* ===========================
+   ボタン
+   =========================== */
+.gym-button {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #ff4400;
+  color: #000;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.gym-button:hover { background: #ff6600; }
+
+/* ===========================
+   フッター
+   =========================== */
+.gym-footer {
+  border-top: 1px solid #222;
+  padding-top: 16px;
+  margin-top: 32px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #444;
+  letter-spacing: 0.1em;
+}
+
+/* ===========================
+   記事フッター（著者情報）
+   =========================== */
+.gym-author-panel {
+  background: #111;
+  border: 1px solid #222;
+  border-left: 4px solid #ff4400;
+  padding: 16px;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+/* ===========================
+   非表示
+   =========================== */
+.gym-hidden { display: none !important; }

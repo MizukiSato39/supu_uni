@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{POST_TITLE}} | {{BLOG_TITLE}} | スプリング☆ユニバース</title>
+  <meta property="og:title" content="{{POST_TITLE}}">
+  <meta property="og:description" content="{{POST_EXCERPT}}">
+  <link rel="stylesheet" href="../../../assets/css/gym-log.css">
+</head>
+<body>
+
+  <div class="gym-container">
+
+    <!-- ヘッダー -->
+    <header class="gym-header">
+      <div class="gym-site-title">✦ SPRING☆UNIVERSE ✦</div>
+      <nav class="gym-nav">
+        <a href="../../../index.html">[ TOP ]</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- パンくずナビ -->
+      <div class="gym-breadcrumb">
+        <a href="../../../index.html">🏠 HOME</a>
+        <span class="gym-sep">/</span>
+        <a href="../index.html">{{BLOG_TITLE}}</a>
+        <span class="gym-sep">/</span>
+        <span>{{POST_TITLE}}</span>
+      </div>
+
+      <!-- 記事本体 -->
+      <article>
+        <header style="margin-bottom: 28px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <span style="font-size:2.5rem">{{BLOG_EMOJI}}</span>
+            <span style="font-size:0.85rem;color:#555;letter-spacing:0.1em">{{BLOG_TITLE}}</span>
+          </div>
+          <div class="gym-post-title">{{POST_TITLE}}</div>
+          <div class="gym-post-meta">📅 {{POST_DATE}} | ✍️ {{POST_AUTHOR}}</div>
+          <div style="margin-bottom:14px">{{POST_TAGS}}</div>
+          <hr class="gym-divider">
+        </header>
+
+        <!-- 本文 -->
+        <div class="post-content" style="margin-bottom:40px">
+          {{POST_CONTENT}}
+        </div>
+
+        <footer>
+          <hr class="gym-divider" style="margin-bottom:20px">
+          <div class="gym-author-panel">
+            <p style="margin:0 0 6px;color:#888">
+              執筆: <span style="color:#ff8800;font-weight:700">{{POST_AUTHOR}}</span>
+            </p>
+            <p style="margin:0;font-size:0.82rem;color:#444">
+              ※ 記事内容は執筆者の個人的見解です。
+            </p>
+          </div>
+
+          <!-- 前後記事ナビ -->
+          <div class="post-nav-grid">
+            {{PREV_POST}}
+            {{NEXT_POST}}
+          </div>
+
+          <div style="text-align:center">
+            <a href="../index.html" class="gym-button">← BACK TO LOG</a>
+          </div>
+        </footer>
+      </article>
+
+    </main>
+
+    <footer class="gym-footer">
+      <p>© 2026 Spring☆Universe | No Days Off</p>
+    </footer>
+
+  </div>
+</body>
+</html>

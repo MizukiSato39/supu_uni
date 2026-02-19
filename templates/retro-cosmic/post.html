@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{POST_TITLE}} | {{BLOG_TITLE}} | スプリング☆ユニバース</title>
+  <meta property="og:title" content="{{POST_TITLE}}">
+  <meta property="og:description" content="{{POST_EXCERPT}}">
+  <link rel="stylesheet" href="../../../assets/css/retro-cosmic.css">
+</head>
+<body class="space-bg">
+
+  <div class="cosmic-container">
+
+    <!-- ヘッダー -->
+    <header class="cosmic-header">
+      <div class="cosmic-site-title neon-text">✦ SPRING☆UNIVERSE ✦</div>
+      <nav class="cosmic-nav">
+        <a href="../../../index.html" class="retro-link">[ TOP ]</a>
+        <a href="../index.html" class="retro-link">[ {{BLOG_TITLE}} ]</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- パンくずナビ -->
+      <div class="cosmic-breadcrumb">
+        <a href="../../../index.html" class="retro-link">🏠 HOME</a>
+        <span class="cosmic-sep"> &gt; </span>
+        <a href="../index.html" class="retro-link">{{BLOG_TITLE}}</a>
+        <span class="cosmic-sep"> &gt; </span>
+        <span>{{POST_TITLE}}</span>
+      </div>
+
+      <!-- 記事本体 -->
+      <article class="retro-panel cosmic-post">
+        <header class="cosmic-post-header">
+          <div class="cosmic-post-blog-label">
+            <span style="font-size:2rem">{{BLOG_EMOJI}}</span>
+            <span class="retro-link">{{BLOG_TITLE}}</span>
+          </div>
+          <h1 class="cosmic-post-title neon-text">{{POST_TITLE}}</h1>
+          <div class="cosmic-post-meta">
+            📅 {{POST_DATE}} | ✍️ {{POST_AUTHOR}}
+          </div>
+          <div class="cosmic-post-tags">{{POST_TAGS}}</div>
+          <div class="retro-separator"></div>
+        </header>
+
+        <!-- 本文 -->
+        <div class="post-content cosmic-post-body">
+          {{POST_CONTENT}}
+        </div>
+
+        <footer class="cosmic-post-footer">
+          <div class="retro-separator"></div>
+          <p style="text-align:center;font-size:0.9rem;opacity:0.8">
+            この記事は <span class="cosmic-accent">{{POST_AUTHOR}}</span> が執筆しました。
+          </p>
+
+          <!-- 前後記事ナビ -->
+          <div class="post-nav-grid" style="margin-top:20px">
+            {{PREV_POST}}
+            {{NEXT_POST}}
+          </div>
+
+          <div style="text-align:center;margin-top:20px">
+            <a href="../index.html" class="retro-button">◀ {{BLOG_TITLE}} 一覧に戻る</a>
+          </div>
+        </footer>
+      </article>
+
+    </main>
+
+    <footer class="cosmic-footer">
+      <div class="retro-separator"></div>
+      <p>© 2026 レン・カワセのスプリング☆ユニバース</p>
+    </footer>
+
+  </div>
+</body>
+</html>

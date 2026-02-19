@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{BLOG_TITLE}} | スプリング☆ユニバース</title>
+  <meta property="og:title" content="{{BLOG_TITLE}}">
+  <meta property="og:description" content="{{BLOG_DESC}}">
+  <link rel="stylesheet" href="../../assets/css/terminal.css">
+</head>
+<body>
+
+  <div class="term-container">
+
+    <!-- ヘッダー -->
+    <header class="term-header">
+      <div class="term-prompt">user@spring-universe:~$ <span class="term-blink">▌</span></div>
+      <div class="term-title">SPRING☆UNIVERSE BLOG PORTAL</div>
+      <nav class="term-nav">
+        <a href="../../index.html" class="term-link">cd ~</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- パンくずナビ -->
+      <div class="term-breadcrumb">
+        <span class="term-prompt-mini">$</span>
+        <a href="../../index.html" class="term-link">~</a>
+        <span class="term-sep">/</span>
+        <span class="term-current">{{BLOG_SLUG}}</span>
+      </div>
+
+      <!-- ブログ情報 -->
+      <div class="term-block">
+        <div class="term-block-header">
+          <span class="term-cmd">cat blog.info</span>
+        </div>
+        <div class="term-block-body">
+          <div class="term-line"><span class="term-key">BLOG_NAME</span>  = "{{BLOG_TITLE}}"</div>
+          <div class="term-line"><span class="term-key">AUTHOR</span>     = "{{BLOG_AUTHOR}}"</div>
+          <div class="term-line"><span class="term-key">DESCRIPTION</span>= "{{BLOG_DESC}}"</div>
+          <div class="term-line"><span class="term-key">PLANET</span>     = "{{PLANET_JA}} ({{PLANET_EN}})"</div>
+          <div class="term-line"><span class="term-key">POST_COUNT</span> = {{POST_COUNT}}</div>
+          <div class="term-line"><span class="term-key">LAST_UPDATE</span>= "{{LATEST_DATE}}"</div>
+        </div>
+      </div>
+
+      <!-- タグフィルター -->
+      {{TAG_FILTER}}
+
+      <!-- 記事一覧 -->
+      <div class="term-block">
+        <div class="term-block-header">
+          <span class="term-cmd">ls -lt posts/ <span class="term-comment"># {{POST_COUNT}} entries</span></span>
+        </div>
+        <div class="term-block-body">
+          {{POST_LIST}}
+        </div>
+      </div>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="term-footer">
+      <div class="term-line term-dim">© 2026 Spring☆Universe | MIT License</div>
+      <div class="term-prompt-mini">$ <span class="term-blink">▌</span></div>
+    </footer>
+
+  </div>
+  <script src="../../assets/js/tag-filter.js"></script>
+</body>
+</html>

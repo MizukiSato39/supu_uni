@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{POST_TITLE}} | {{BLOG_TITLE}} | スプリング☆ユニバース</title>
+  <meta property="og:title" content="{{POST_TITLE}}">
+  <meta property="og:description" content="{{POST_EXCERPT}}">
+  <link rel="stylesheet" href="../../../assets/css/onsen-cosmos.css">
+</head>
+<body>
+
+  <div class="onsen-container">
+
+    <!-- ヘッダー -->
+    <header class="onsen-header">
+      <div class="onsen-site-title">スプリング☆ユニバース</div>
+      <nav class="onsen-nav">
+        <a href="../../../index.html">ホームへ</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- パンくずナビ -->
+      <div class="onsen-breadcrumb">
+        <a href="../../../index.html">🏠 ホーム</a>
+        <span class="onsen-sep">／</span>
+        <a href="../index.html">{{BLOG_TITLE}}</a>
+        <span class="onsen-sep">／</span>
+        <span>{{POST_TITLE}}</span>
+      </div>
+
+      <!-- 記事本体 -->
+      <article>
+        <header style="margin-bottom: 28px; text-align: center;">
+          <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:14px">
+            <span style="font-size:2.5rem">{{BLOG_EMOJI}}</span>
+            <span style="font-size:0.85rem;color:#5a6a7a;letter-spacing:0.15em">{{BLOG_TITLE}}</span>
+          </div>
+          <h1 class="onsen-post-title">{{POST_TITLE}}</h1>
+          <div class="onsen-post-meta">📅 {{POST_DATE}} | ✍️ {{POST_AUTHOR}}</div>
+          <div style="margin-bottom:16px">{{POST_TAGS}}</div>
+          <div class="onsen-divider"></div>
+        </header>
+
+        <!-- 本文 -->
+        <div class="post-content" style="margin-bottom:40px">
+          {{POST_CONTENT}}
+        </div>
+
+        <footer>
+          <div class="onsen-divider" style="margin-bottom:20px"></div>
+          <div class="onsen-author-panel">
+            <p style="margin:0 0 8px;color:#a8b8c8">
+              執筆: <span style="color:#f0d090;font-weight:600">{{POST_AUTHOR}}</span>
+            </p>
+            <p style="margin:0;font-size:0.82rem;color:#5a6a7a">
+              ※ 記事内容は執筆者の個人的見解です。
+            </p>
+          </div>
+
+          <!-- 前後記事ナビ -->
+          <div class="post-nav-grid">
+            {{PREV_POST}}
+            {{NEXT_POST}}
+          </div>
+
+          <div style="text-align:center">
+            <a href="../index.html" class="onsen-button">☽ 観測日誌へ戻る</a>
+          </div>
+        </footer>
+      </article>
+
+    </main>
+
+    <footer class="onsen-footer">
+      <p>© 2026 レン・カワセのスプリング☆ユニバース</p>
+    </footer>
+
+  </div>
+</body>
+</html>

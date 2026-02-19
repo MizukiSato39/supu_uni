@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{BLOG_TITLE}} | スプリング☆ユニバース</title>
+  <meta property="og:title" content="{{BLOG_TITLE}}">
+  <meta property="og:description" content="{{BLOG_DESC}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/kawase-blog.css">
+</head>
+<body>
+
+  <div class="kawase-container">
+
+    <!-- ヘッダー -->
+    <header class="kawase-header">
+      <div class="kawase-site-title">スプリング☆ユニバース</div>
+      <nav class="kawase-nav">
+        <a href="../../index.html">🏠 ホームへ</a>
+      </nav>
+    </header>
+
+    <!-- ブログヒーロー -->
+    <div class="kawase-blog-hero">
+      <span class="kawase-blog-emoji">{{BLOG_EMOJI}}</span>
+      <h1 class="kawase-blog-title">{{BLOG_TITLE}}</h1>
+      <p class="kawase-blog-desc">{{BLOG_DESC}}</p>
+      <p class="kawase-blog-meta">✍️ {{BLOG_AUTHOR}} &nbsp;|&nbsp; 🪐 {{PLANET_JA}} ({{PLANET_EN}})</p>
+      <div class="kawase-divider"></div>
+      <p class="kawase-stats">
+        📓 記事数: <span class="kawase-accent">{{POST_COUNT}}</span> &nbsp;|&nbsp;
+        🌙 最終更新: <span class="kawase-accent">{{LATEST_DATE}}</span>
+      </p>
+    </div>
+
+    <main class="kawase-main">
+      <div class="kawase-content">
+
+        <!-- タグフィルター -->
+        {{TAG_FILTER}}
+
+        <!-- 記事一覧 -->
+        <div class="kawase-post-grid">
+          {{POST_LIST}}
+        </div>
+
+      </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="kawase-footer">
+      <p>© 2026 レン・カワセのスプリング☆ユニバース</p>
+    </footer>
+
+  </div>
+
+  <script src="../../assets/js/tag-filter.js"></script>
+
+</body>
+</html>

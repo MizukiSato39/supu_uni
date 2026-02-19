@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{SITE_TITLE}}</title>
+  <meta property="og:title" content="{{SITE_TITLE}}">
+  <meta property="og:description" content="研究室メンバーのブログポータル">
+  <link rel="stylesheet" href="assets/css/word-retro.css">
+</head>
+<body>
+  <div style="padding: 20px; min-height: 100vh;">
+    <div class="word-document">
+
+      <!-- ヘッダー -->
+      <div class="word-page-header">
+        <h1 class="word-doc-title">レン・カワセの<br>スプリング☆ユニバース</h1>
+        <p class="word-doc-subtitle">研究室メンバーのブログポータル</p>
+      </div>
+      <div class="word-metadata">
+        <p>作成日時: {{BUILD_DATE}}</p>
+        <p>作成者: Ren Kawase Lab</p>
+        <p>ファイル形式: Microsoft Word 97-2003 (.doc)</p>
+      </div>
+      <div class="word-section-break"></div>
+
+      <main>
+
+        <!-- Section 1: ブログ一覧 -->
+        <div class="word-section">
+          <div class="word-section-heading">📋 ブログ一覧</div>
+          <table class="word-table">
+            <thead>
+              <tr>
+                <th style="width:30%">ブログ名</th>
+                <th style="width:40%">説明</th>
+                <th style="width:15%">作成者</th>
+                <th style="width:15%">記事数</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{BLOG_TABLE_ROWS}}
+            </tbody>
+          </table>
+          <div class="word-info-panel" style="margin-top:15px">
+            <div class="word-info-panel-title">📊 統計情報</div>
+            <p style="margin:0;font-size:0.9rem">
+              総ブログ数: <span class="word-bold word-text-blue">{{TOTAL_BLOGS}}</span> |
+              総記事数: <span class="word-bold word-text-blue">{{TOTAL_POSTS}}</span> |
+              最終更新: <span class="word-bold word-text-blue">{{LATEST_DATE}}</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="word-section-break"></div>
+
+        <!-- Section 2: 最新の投稿 -->
+        <div class="word-section">
+          <div class="word-section-heading">📝 最新の投稿</div>
+          {{LATEST_POSTS}}
+        </div>
+
+        <div class="word-section-break"></div>
+
+        <!-- Section 3: このサイトについて -->
+        <div class="word-section">
+          <div class="word-section-heading">ℹ️ このサイトについて</div>
+          <p style="margin:0 0 10px;line-height:1.6">
+            <span class="word-bold word-text-blue">スプリング☆ユニバース</span>は、
+            研究室メンバーが自由に記事を投稿できるブログポータルです。
+          </p>
+          <div class="word-bullet-point">各ブログは独立した研究成果・考察を掲載</div>
+          <div class="word-bullet-point">定期的に更新されるコンテンツをチェック</div>
+          <div class="word-bullet-point">研究室メンバーの最新の動向を追跡可能</div>
+          <div class="word-bullet-point">多様なジャンルをカバー（温泉、お笑い、イラスト、筋トレ、恋愛、日本酒、料理、ゲーム、海外旅行）</div>
+          <div class="word-warning-panel" style="margin-top:20px">
+            <p class="word-bold" style="margin:0 0 8px;color:#ff0000">⚠️ 重要事項</p>
+            <p style="margin:0;font-size:0.9rem;line-height:1.5">
+              このサイトは外部公開されています。個人情報の掲載、著作権を侵害する画像・文章の転載は厳禁です。
+              各記事は執筆者の個人的見解であり、所属組織の公式見解ではありません。
+            </p>
+          </div>
+          <div style="margin-top:20px;text-align:center">
+            <div class="word-counter">VISITORS: 000042069</div>
+          </div>
+        </div>
+
+      </main>
+
+      <!-- フッター -->
+      <div class="word-footnote">
+        <p style="margin:0;font-size:0.8rem"><sup>1</sup> このドキュメントは平成時代の Word プロセッサを模した Web ポータルです</p>
+        <p style="margin:5px 0 0;font-size:0.8rem"><sup>2</sup> 掲載内容は各執筆者の個人的見解であり、所属組織の公式見解ではありません</p>
+        <p style="margin:5px 0 0;font-size:0.8rem"><sup>3</sup> 個人情報保護・著作権遵守・無断転載禁止</p>
+      </div>
+      <div class="word-page-number">− Page 1 −</div>
+      <div class="word-footer">
+        <p>© 2026 レン・カワセのスプリング☆ユニバース</p>
+        <p style="font-size:0.8rem;margin-top:8px">研究室メンバーのブログポータル | Since 2026</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BGM プレイヤー -->
+  <audio id="bgm" src="assets/music/20260213_すぷりんぐ☆ゆにばあす.mp3" loop preload="auto"></audio>
+
+  <div id="bgm-player" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #000080;
+    border: 2px solid #c0c0c0;
+    border-top-color: #ffffff;
+    border-left-color: #ffffff;
+    padding: 6px 10px;
+    font-family: 'MS Gothic', 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: #ffffff;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 2px 2px 0 #000;
+    user-select: none;
+  ">
+    <span>🎵 BGM</span>
+    <button id="bgm-btn" onclick="toggleBgm()" style="
+      background: #c0c0c0;
+      border: 2px solid;
+      border-top-color: #ffffff;
+      border-left-color: #ffffff;
+      border-bottom-color: #808080;
+      border-right-color: #808080;
+      color: #000000;
+      font-family: 'MS Gothic', 'Courier New', monospace;
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      cursor: pointer;
+      min-width: 56px;
+    ">▶ 再生</button>
+    <button onclick="document.getElementById('bgm-player').style.display='none'" style="
+      background: #c0c0c0;
+      border: 2px solid;
+      border-top-color: #ffffff;
+      border-left-color: #ffffff;
+      border-bottom-color: #808080;
+      border-right-color: #808080;
+      color: #000000;
+      font-family: 'MS Gothic', monospace;
+      font-size: 0.7rem;
+      padding: 2px 6px;
+      cursor: pointer;
+      line-height: 1;
+    ">✕</button>
+  </div>
+
+  <script>
+    const bgm = document.getElementById('bgm');
+    const btn = document.getElementById('bgm-btn');
+
+    function toggleBgm() {
+      if (bgm.paused) {
+        bgm.play().then(() => { btn.textContent = '⏸ 停止'; }).catch(() => {});
+      } else {
+        bgm.pause();
+        btn.textContent = '▶ 再生';
+      }
+    }
+
+    // ページ読み込み時に自動再生を試みる
+    window.addEventListener('DOMContentLoaded', () => {
+      bgm.play().then(() => {
+        btn.textContent = '⏸ 停止';
+      }).catch(() => {
+        // 自動再生がブロックされた場合はボタンで手動再生
+      });
+    });
+  </script>
+
+</body>
+</html>

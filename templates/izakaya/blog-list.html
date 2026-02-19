@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{BLOG_TITLE}} | スプリング☆ユニバース</title>
+  <meta property="og:title" content="{{BLOG_TITLE}}">
+  <meta property="og:description" content="{{BLOG_DESC}}">
+  <link rel="stylesheet" href="../../assets/css/izakaya.css">
+</head>
+<body>
+
+  <div class="izakaya-container">
+
+    <!-- ヘッダー -->
+    <header class="izakaya-header">
+      <div class="izakaya-site-title">スプリング☆ユニバース</div>
+      <nav class="izakaya-nav">
+        <a href="../../index.html">[ 表へ戻る ]</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- パンくずナビ -->
+      <div class="izakaya-breadcrumb">
+        <a href="../../index.html">🏠 ホーム</a>
+        <span class="izakaya-sep">〉</span>
+        <span>{{BLOG_TITLE}}</span>
+      </div>
+
+      <!-- ブログヘッダー（品書き） -->
+      <div class="izakaya-blog-header">
+        <span class="izakaya-blog-emoji">{{BLOG_EMOJI}}</span>
+        <div class="izakaya-blog-title">{{BLOG_TITLE}}</div>
+        <p class="izakaya-blog-desc">{{BLOG_DESC}}</p>
+        <p class="izakaya-blog-meta">✍️ {{BLOG_AUTHOR}} | 🪐 {{PLANET_JA}} ({{PLANET_EN}})</p>
+        <hr class="izakaya-divider">
+        <p class="izakaya-stats">
+          🍶 品数: <span class="izakaya-accent">{{POST_COUNT}}</span> |
+          🆕 最終更新: <span class="izakaya-accent">{{LATEST_DATE}}</span>
+        </p>
+      </div>
+
+      <!-- タグフィルター -->
+      {{TAG_FILTER}}
+
+      <!-- 記事一覧 -->
+      <div class="izakaya-section">
+        <div class="izakaya-section-heading">〔 品書き一覧 〕({{POST_COUNT}}品)</div>
+        {{POST_LIST}}
+      </div>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="izakaya-footer">
+      <p>© 2026 レン・カワセのスプリング☆ユニバース</p>
+    </footer>
+
+  </div>
+  <script src="../../assets/js/tag-filter.js"></script>
+</body>
+</html>

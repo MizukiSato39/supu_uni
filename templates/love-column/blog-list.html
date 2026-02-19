@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{BLOG_TITLE}} | スプリング☆ユニバース</title>
+  <meta property="og:title" content="{{BLOG_TITLE}}">
+  <meta property="og:description" content="{{BLOG_DESC}}">
+  <link rel="stylesheet" href="../../assets/css/love-column.css">
+</head>
+<body>
+
+  <div class="love-container">
+
+    <!-- ヘッダー -->
+    <header class="love-header">
+      <div class="love-site-title">SPRING ☆ UNIVERSE</div>
+      <nav class="love-nav">
+        <a href="../../index.html">トップへ戻る</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- パンくずナビ -->
+      <div class="love-breadcrumb">
+        <a href="../../index.html">🏠 ホーム</a>
+        <span class="love-sep">/</span>
+        <span>{{BLOG_TITLE}}</span>
+      </div>
+
+      <!-- ブログヘッダー -->
+      <div class="love-blog-header">
+        <span class="love-blog-emoji">{{BLOG_EMOJI}}</span>
+        <div class="love-blog-title">{{BLOG_TITLE}}</div>
+        <p class="love-blog-desc">{{BLOG_DESC}}</p>
+        <p class="love-blog-meta">✍️ {{BLOG_AUTHOR}} | 🪐 {{PLANET_JA}} ({{PLANET_EN}})</p>
+        <hr class="love-divider">
+        <p class="love-stats">
+          📝 記事数: <span class="love-accent">{{POST_COUNT}}</span> |
+          🆕 最終更新: <span class="love-accent">{{LATEST_DATE}}</span>
+        </p>
+      </div>
+
+      <!-- タグフィルター -->
+      {{TAG_FILTER}}
+
+      <!-- 記事一覧 -->
+      <div class="love-section">
+        <div class="love-section-heading">記事一覧 ({{POST_COUNT}}件)</div>
+        {{POST_LIST}}
+      </div>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="love-footer">
+      <p>© 2026 レン・カワセのスプリング☆ユニバース</p>
+    </footer>
+
+  </div>
+  <script src="../../assets/js/tag-filter.js"></script>
+</body>
+</html>
