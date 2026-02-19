@@ -1,0 +1,544 @@
+/* kawase-blog.css
+   SpringUniverse テンプレート: 北の湯と星めぐり風デザイン
+   kawase_onsen プロジェクトのデザインを移植
+   --------------------------------------------------------- */
+
+/* -------- Design tokens -------- */
+:root {
+  --kb-bg:       #f8f6f3;
+  --kb-surface:  #ffffff;
+  --kb-text:     #2a2a4a;
+  --kb-text2:    #667db6;
+  --kb-border:   rgba(42, 42, 74, 0.10);
+  --kb-accent:   #302b63;
+  --kb-accent2:  #0082c8;
+  --kb-shadow-sm: 0 8px 18px rgba(0, 0, 0, 0.08);
+  --kb-shadow-md: 0 12px 24px rgba(0, 0, 0, 0.12);
+  --kb-radius:   16px;
+}
+
+/* -------- Base -------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { min-height: 100%; margin: 0; }
+
+body {
+  background: var(--kb-bg);
+  color: var(--kb-text);
+  font-family: 'Zen Kaku Gothic New', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.7;
+}
+
+a { color: inherit; text-decoration: none; }
+
+::selection { background: rgba(48, 43, 99, 0.18); }
+
+/* -------- Layout wrapper -------- */
+.kawase-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.kawase-main {
+  flex: 1;
+}
+
+/* -------- Header -------- */
+.kawase-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(248, 246, 243, 0.80);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--kb-border);
+  padding: 0 24px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kawase-site-title {
+  font-family: 'Kaisei Opti', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--kb-text);
+  letter-spacing: 0.02em;
+}
+
+.kawase-nav {
+  display: flex;
+  gap: 4px;
+}
+
+.kawase-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  color: var(--kb-text);
+  transition: background 0.2s ease;
+}
+
+.kawase-nav a:hover {
+  background: rgba(48, 43, 99, 0.08);
+}
+
+/* -------- Blog header section -------- */
+.kawase-blog-hero {
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  padding: 48px 24px 40px;
+  text-align: center;
+  color: #fff;
+}
+
+.kawase-blog-emoji {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.kawase-blog-title {
+  font-family: 'Kaisei Opti', serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: #f0ede8;
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+
+.kawase-blog-desc {
+  font-size: 0.95rem;
+  color: rgba(240, 237, 232, 0.75);
+  max-width: 520px;
+  margin: 0 auto 12px;
+}
+
+.kawase-blog-meta {
+  font-size: 0.82rem;
+  color: rgba(240, 237, 232, 0.6);
+  margin: 0 0 20px;
+}
+
+.kawase-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #667db6, #0082c8);
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+.kawase-stats {
+  font-size: 0.85rem;
+  color: rgba(240, 237, 232, 0.65);
+}
+
+.kawase-accent {
+  color: #c8d8f0;
+  font-weight: 600;
+}
+
+/* -------- Content wrapper -------- */
+.kawase-content {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+/* -------- Tag filter -------- */
+.kawase-tag-filter {
+  background: var(--kb-surface);
+  border: 1px solid var(--kb-border);
+  border-radius: var(--kb-radius);
+  padding: 16px 20px;
+  margin-bottom: 28px;
+  box-shadow: var(--kb-shadow-sm);
+}
+
+.kawase-tag-filter-heading {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--kb-text2);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.kawase-tag-filter-wrap {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* -------- Tag chips (buttons & spans) -------- */
+.kawase-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  border: 1px solid rgba(48, 43, 99, 0.22);
+  color: var(--kb-accent);
+  background: rgba(48, 43, 99, 0.06);
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+  line-height: 1;
+}
+
+button.kawase-tag {
+  font-family: inherit;
+  font-size: 0.78rem;
+}
+
+.kawase-tag:hover,
+.kawase-tag-active {
+  background: rgba(48, 43, 99, 0.14);
+  border-color: rgba(48, 43, 99, 0.4);
+  transform: translateY(-1px);
+}
+
+/* -------- Post grid -------- */
+.kawase-post-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 1024px) {
+  .kawase-post-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  .kawase-post-grid { grid-template-columns: 1fr; }
+}
+
+/* -------- Post card -------- */
+.kawase-post-card {
+  display: block;
+  background: var(--kb-surface);
+  border: 1px solid var(--kb-border);
+  border-radius: var(--kb-radius);
+  padding: 20px;
+  box-shadow: var(--kb-shadow-sm);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  border-top: 3px solid var(--kb-accent);
+}
+
+.kawase-post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--kb-shadow-md);
+  border-color: rgba(48, 43, 99, 0.24);
+}
+
+.kawase-card-date {
+  font-size: 0.75rem;
+  color: var(--kb-text2);
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+}
+
+.kawase-card-title {
+  font-family: 'Kaisei Opti', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--kb-text);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.kawase-card-excerpt {
+  font-size: 0.85rem;
+  color: rgba(42, 42, 74, 0.72);
+  line-height: 1.65;
+  margin: 0 0 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.kawase-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.kawase-card-meta {
+  font-size: 0.78rem;
+  color: var(--kb-text2);
+}
+
+.kawase-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+/* -------- Breadcrumb -------- */
+.kawase-breadcrumb {
+  font-size: 0.82rem;
+  color: var(--kb-text2);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.kawase-sep {
+  margin: 0 2px;
+  color: var(--kb-border);
+}
+
+/* -------- Article page content area -------- */
+.kawase-article-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+}
+
+/* -------- Article header -------- */
+.kawase-article-meta {
+  font-size: 0.8rem;
+  color: var(--kb-text2);
+  margin-bottom: 8px;
+}
+
+.kawase-post-title {
+  font-family: 'Kaisei Opti', serif;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 700;
+  color: var(--kb-text);
+  line-height: 1.35;
+  margin: 0 0 12px;
+}
+
+.kawase-post-excerpt {
+  font-size: 1rem;
+  color: rgba(42, 42, 74, 0.68);
+  line-height: 1.7;
+  margin: 0 0 16px;
+  padding: 14px 18px;
+  border-left: 3px solid rgba(48, 43, 99, 0.3);
+  border-radius: 0 12px 12px 0;
+  background: rgba(48, 43, 99, 0.04);
+}
+
+.kawase-post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+/* -------- Prose typography -------- */
+.prose {
+  color: var(--kb-text);
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+.prose > * { margin: 0; }
+
+.prose p {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  color: rgba(42, 42, 74, 0.92);
+}
+
+.prose a {
+  color: var(--kb-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose a:hover { opacity: 0.85; }
+
+.prose h1, .prose h2, .prose h3 {
+  font-family: 'Kaisei Opti', serif;
+  color: var(--kb-text);
+  line-height: 1.35;
+}
+
+.prose h2 {
+  margin-top: 32px;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(42, 42, 74, 0.10);
+}
+
+.prose h3 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.prose ul {
+  list-style-type: disc;
+  margin: 12px 0 16px;
+  padding-left: 1.4rem;
+}
+
+.prose ol {
+  list-style-type: decimal;
+  margin: 12px 0 16px;
+  padding-left: 1.4rem;
+}
+
+.prose li {
+  margin: 6px 0;
+  color: rgba(42, 42, 74, 0.92);
+}
+
+.prose li::marker { color: rgba(48, 43, 99, 0.4); }
+
+.prose code {
+  font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  padding: 0.15em 0.4em;
+  border-radius: 8px;
+  background: rgba(42, 42, 74, 0.06);
+  border: 1px solid rgba(42, 42, 74, 0.08);
+}
+
+.prose blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  border-left: 4px solid rgba(48, 43, 99, 0.3);
+  background: rgba(248, 246, 243, 0.8);
+  border-radius: 0 14px 14px 0;
+  color: rgba(42, 42, 74, 0.85);
+}
+
+.prose img {
+  max-width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--kb-border);
+  box-shadow: var(--kb-shadow-sm);
+}
+
+/* -------- Author panel -------- */
+.kawase-author-panel {
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 100%);
+  border-radius: var(--kb-radius);
+  padding: 20px 24px;
+  margin-top: 40px;
+  color: rgba(240, 237, 232, 0.85);
+  font-size: 0.88rem;
+}
+
+.kawase-author-name {
+  color: #c8d8f0;
+  font-weight: 600;
+}
+
+/* -------- Prev / Next nav -------- */
+.kawase-post-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+@media (max-width: 540px) {
+  .kawase-post-nav { grid-template-columns: 1fr; }
+}
+
+.kawase-nav-card {
+  display: block;
+  background: var(--kb-surface);
+  border: 1px solid var(--kb-border);
+  border-radius: 14px;
+  padding: 14px 18px;
+  box-shadow: var(--kb-shadow-sm);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.kawase-nav-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--kb-shadow-md);
+}
+
+.kawase-nav-label {
+  font-size: 0.72rem;
+  color: var(--kb-text2);
+  margin-bottom: 4px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.kawase-nav-title {
+  font-family: 'Kaisei Opti', serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--kb-text);
+  line-height: 1.4;
+}
+
+.kawase-nav-date {
+  font-size: 0.75rem;
+  color: var(--kb-text2);
+  margin-top: 4px;
+}
+
+/* -------- Back button -------- */
+.kawase-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 28px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(42, 42, 74, 0.06);
+  border: 1px solid var(--kb-border);
+  font-size: 0.88rem;
+  color: var(--kb-text);
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.kawase-back-btn:hover {
+  background: rgba(42, 42, 74, 0.12);
+  transform: translateY(-1px);
+}
+
+/* -------- Footer -------- */
+.kawase-footer {
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 100%);
+  color: rgba(240, 237, 232, 0.55);
+  text-align: center;
+  padding: 24px;
+  font-size: 0.8rem;
+  margin-top: auto;
+}
+
+/* -------- Empty state -------- */
+.kawase-empty {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--kb-text2);
+  font-size: 0.95rem;
+  background: var(--kb-surface);
+  border-radius: var(--kb-radius);
+  border: 1px solid var(--kb-border);
+}
+
+/* -------- View transitions -------- */
+@view-transition { navigation: auto; }
+
+@media (max-width: 640px) {
+  .kawase-header { padding: 0 16px; }
+  .kawase-content { padding: 28px 16px; }
+  .kawase-blog-hero { padding: 36px 16px 32px; }
+  .kawase-article-wrap { padding: 28px 16px 48px; }
+  .prose { font-size: 15.5px; }
+}

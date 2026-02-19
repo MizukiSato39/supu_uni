@@ -1,0 +1,387 @@
+/* ===========================
+   スプリング☆ユニバース
+   LOVE COLUMN - 恋愛コラム誌スタイル
+   =========================== */
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Georgia', 'Hiragino Mincho ProN', '游明朝', serif;
+  background-color: #fff5f7;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(255, 192, 203, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 105, 135, 0.1) 0%, transparent 40%);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===========================
+   コンテナ
+   =========================== */
+.love-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===========================
+   ヘッダー
+   =========================== */
+.love-header {
+  text-align: center;
+  padding: 24px 20px 20px;
+  border-bottom: 3px double #e8a0b0;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.love-header::before,
+.love-header::after {
+  content: '♥ ♥ ♥';
+  display: block;
+  font-size: 0.75rem;
+  color: #e8a0b0;
+  letter-spacing: 0.8em;
+  margin-bottom: 8px;
+}
+
+.love-site-title {
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  color: #c0607a;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 8px 0;
+}
+
+.love-nav a {
+  color: #c0607a;
+  text-decoration: none;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #e8a0b0;
+  padding-bottom: 1px;
+}
+
+.love-nav a:hover { color: #ff4070; border-bottom-color: #ff4070; }
+
+/* ===========================
+   ブレッドクラム
+   =========================== */
+.love-breadcrumb {
+  font-size: 0.82rem;
+  color: #b0a0a5;
+  margin-bottom: 18px;
+  letter-spacing: 0.05em;
+}
+
+.love-breadcrumb a { color: #c0607a; text-decoration: none; }
+.love-breadcrumb a:hover { color: #ff4070; }
+.love-sep { margin: 0 8px; color: #d0b0b8; }
+
+/* ===========================
+   ブログヘッダー
+   =========================== */
+.love-blog-header {
+  background: white;
+  border: 1px solid #f0c0cc;
+  border-radius: 8px;
+  padding: 28px;
+  margin-bottom: 28px;
+  text-align: center;
+  box-shadow: 0 2px 16px rgba(255, 105, 135, 0.1);
+  position: relative;
+}
+
+.love-blog-header::before {
+  content: '';
+  display: block;
+  height: 4px;
+  background: linear-gradient(to right, #ff8fab, #ffb3c6, #ff8fab);
+  border-radius: 8px 8px 0 0;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+}
+
+.love-blog-emoji { font-size: 3.5rem; margin-bottom: 12px; display: block; }
+
+.love-blog-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #c0304a;
+  margin: 0 0 10px;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+.love-blog-desc {
+  font-size: 1rem;
+  color: #888;
+  font-style: italic;
+  margin: 0 0 12px;
+  line-height: 1.6;
+}
+
+.love-blog-meta { font-size: 0.85rem; color: #b0a0a5; margin: 0 0 16px; }
+
+.love-divider {
+  border: none;
+  border-top: 1px dashed #f0c0cc;
+  margin: 16px 0;
+}
+
+.love-stats { font-size: 0.9rem; color: #b0a0a5; }
+.love-accent { color: #e04060; font-weight: 600; }
+
+/* ===========================
+   セクション
+   =========================== */
+.love-section { margin-bottom: 28px; }
+
+.love-section-heading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #c0304a;
+  text-align: center;
+  letter-spacing: 0.15em;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0c0cc;
+  position: relative;
+}
+
+.love-section-heading::after {
+  content: '♥';
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.8em;
+}
+
+/* ===========================
+   記事カード
+   =========================== */
+a.love-post-card {
+  display: block;
+  background: white;
+  border: 1px solid #f0c0cc;
+  border-radius: 6px;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+a.love-post-card:hover {
+  box-shadow: 0 4px 18px rgba(255, 105, 135, 0.2);
+  transform: translateY(-1px);
+}
+
+.love-card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #c0304a;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.love-card-date {
+  font-size: 0.8rem;
+  color: #c0b0b5;
+  white-space: nowrap;
+  margin-left: 12px;
+}
+
+.love-card-excerpt {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0 0 10px;
+  line-height: 1.65;
+  font-style: italic;
+}
+
+.love-card-meta { font-size: 0.82rem; color: #b0a0a5; }
+
+/* ===========================
+   タグ
+   =========================== */
+.love-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: #fff0f3;
+  border: 1px solid #f0c0cc;
+  color: #c0607a;
+  margin: 2px;
+}
+
+.love-tag-filter {
+  background: white;
+  border: 1px solid #f0c0cc;
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+}
+
+.love-tag-filter-heading {
+  font-size: 0.82rem;
+  color: #c0b0b5;
+  letter-spacing: 0.15em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+button[data-tag-btn] {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.78rem;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid #f0c0cc;
+  background: #fff0f3;
+  color: #c0607a;
+}
+
+button[data-tag-btn]:hover,
+button[data-tag-btn].active {
+  background: #ff8fab;
+  border-color: #ff8fab;
+  color: white;
+}
+
+/* ===========================
+   記事本文
+   =========================== */
+.post-content h1 {
+  font-size: 1.7rem;
+  color: #c0304a;
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.post-content h2 {
+  font-size: 1.25rem;
+  color: #c0304a;
+  border-bottom: 2px dashed #f0c0cc;
+  padding-bottom: 6px;
+  margin-top: 28px;
+}
+
+.post-content h3 {
+  font-size: 1.05rem;
+  color: #e04060;
+  margin-top: 22px;
+}
+
+.post-content p { line-height: 1.9; color: #444; margin: 0 0 16px; }
+
+.post-content ul,
+.post-content ol {
+  padding-left: 24px;
+  color: #555;
+  line-height: 1.9;
+}
+
+.post-content li { margin-bottom: 6px; }
+
+/* ===========================
+   記事タイトル
+   =========================== */
+.love-post-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #c0304a;
+  line-height: 1.35;
+  margin: 0 0 14px;
+  text-align: center;
+}
+
+.love-post-meta {
+  font-size: 0.88rem;
+  color: #b0a0a5;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+/* ===========================
+   前後ナビ
+   =========================== */
+.post-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 28px 0;
+}
+
+a.love-nav-card {
+  display: block;
+  background: white;
+  border: 1px solid #f0c0cc;
+  border-radius: 6px;
+  padding: 14px;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+a.love-nav-card:hover { background: #fff5f7; }
+
+.love-nav-label { font-size: 0.75rem; color: #c0b0b5; margin-bottom: 6px; }
+.love-nav-title { font-size: 0.9rem; color: #c0304a; font-weight: 600; margin-bottom: 4px; }
+.love-nav-date  { font-size: 0.78rem; color: #c0b0b5; }
+
+/* ===========================
+   ボタン
+   =========================== */
+.love-button {
+  display: inline-block;
+  padding: 10px 28px;
+  background: linear-gradient(135deg, #ff8fab, #ff4070);
+  color: white;
+  font-family: inherit;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(255, 105, 135, 0.3);
+}
+
+.love-button:hover { opacity: 0.9; }
+
+/* ===========================
+   著者パネル
+   =========================== */
+.love-author-panel {
+  background: white;
+  border: 1px solid #f0c0cc;
+  border-radius: 6px;
+  padding: 18px;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+/* ===========================
+   フッター
+   =========================== */
+.love-footer {
+  border-top: 3px double #e8a0b0;
+  padding-top: 20px;
+  margin-top: 36px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #c0b0b5;
+  letter-spacing: 0.1em;
+}
+
+.love-footer::before { content: '♥ '; }
+.love-footer::after  { content: ' ♥'; }
+
+/* ===========================
+   非表示
+   =========================== */
+.love-hidden { display: none !important; }

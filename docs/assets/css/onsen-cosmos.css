@@ -1,0 +1,414 @@
+/* ===========================
+   スプリング☆ユニバース
+   ONSEN COSMOS - 温泉×宇宙スタイル
+   =========================== */
+
+* { box-sizing: border-box; }
+
+/* 星空背景 */
+body {
+  font-family: 'Hiragino Mincho ProN', '游明朝', 'Georgia', serif;
+  background-color: #060e1a;
+  background-image:
+    radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.8) 0%, transparent 100%),
+    radial-gradient(1px 1px at 25% 40%, rgba(255,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 40% 10%, rgba(255,255,255,0.9) 0%, transparent 100%),
+    radial-gradient(1px 1px at 55% 65%, rgba(255,255,255,0.7) 0%, transparent 100%),
+    radial-gradient(1px 1px at 70% 30%, rgba(255,255,255,0.8) 0%, transparent 100%),
+    radial-gradient(1px 1px at 85% 75%, rgba(255,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 92% 20%, rgba(255,255,255,0.7) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 18% 80%, rgba(255,220,150,0.9) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 60% 85%, rgba(200,200,255,0.8) 0%, transparent 100%),
+    radial-gradient(2px 2px at 35% 55%, rgba(255,200,100,0.7) 0%, transparent 100%),
+    radial-gradient(2px 2px at 78% 50%, rgba(180,220,255,0.8) 0%, transparent 100%),
+    radial-gradient(ellipse at 50% 0%, rgba(20, 40, 80, 0.8) 0%, transparent 60%);
+  color: #f0e8d8;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* ===========================
+   コンテナ（旅館の間取り風）
+   =========================== */
+.onsen-container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+/* ===========================
+   ヘッダー（暖簾風）
+   =========================== */
+.onsen-header {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.onsen-header::before,
+.onsen-header::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #c8a060, #f0d090, #c8a060, transparent);
+  margin: 0 auto 10px;
+  width: 80%;
+}
+
+.onsen-header::after { margin-top: 10px; margin-bottom: 0; }
+
+.onsen-site-title {
+  font-size: 0.82rem;
+  letter-spacing: 0.5em;
+  color: #c8a060;
+  font-weight: normal;
+}
+
+.onsen-nav a {
+  color: #a8c8e8;
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 4px 14px;
+  border: 1px solid rgba(168, 200, 232, 0.4);
+  letter-spacing: 0.1em;
+}
+
+.onsen-nav a:hover { background: rgba(168, 200, 232, 0.15); }
+
+/* ===========================
+   ブレッドクラム
+   =========================== */
+.onsen-breadcrumb {
+  font-size: 0.82rem;
+  color: #7a8a9a;
+  margin-bottom: 18px;
+  letter-spacing: 0.05em;
+}
+
+.onsen-breadcrumb a { color: #a8c8e8; text-decoration: none; }
+.onsen-breadcrumb a:hover { color: #d0e8ff; }
+.onsen-sep { margin: 0 8px; color: #3a4a5a; }
+
+/* ===========================
+   ブログヘッダー（旅館の案内板風）
+   =========================== */
+.onsen-blog-header {
+  background: linear-gradient(180deg, #0d1e35 0%, #0a1828 100%);
+  border: 1px solid rgba(200, 160, 96, 0.4);
+  border-top: 3px solid #c8a060;
+  padding: 28px;
+  margin-bottom: 28px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 30px rgba(200, 160, 96, 0.1), inset 0 0 40px rgba(0,0,0,0.4);
+}
+
+/* 四隅の装飾 */
+.onsen-blog-header::before {
+  content: '✦';
+  position: absolute;
+  top: 10px; left: 14px;
+  color: #c8a060;
+  font-size: 0.7rem;
+  opacity: 0.6;
+}
+
+.onsen-blog-emoji { font-size: 3rem; margin-bottom: 12px; display: block; }
+
+.onsen-blog-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f0d090;
+  letter-spacing: 0.15em;
+  margin: 0 0 10px;
+  text-shadow: 0 0 20px rgba(240, 208, 144, 0.4);
+  line-height: 1.35;
+}
+
+.onsen-blog-desc {
+  font-size: 0.95rem;
+  color: #9aaabb;
+  font-style: italic;
+  margin: 0 0 12px;
+  line-height: 1.7;
+}
+
+.onsen-blog-meta { font-size: 0.85rem; color: #7a8a9a; margin: 0 0 14px; }
+
+.onsen-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(200,160,96,0.5), transparent);
+  margin: 14px 0;
+}
+
+.onsen-stats { font-size: 0.9rem; color: #8a9aaa; }
+.onsen-accent { color: #f0d090; font-weight: 600; }
+
+/* ===========================
+   セクション
+   =========================== */
+.onsen-section { margin-bottom: 28px; }
+
+.onsen-section-heading {
+  font-size: 0.88rem;
+  color: #c8a060;
+  letter-spacing: 0.3em;
+  text-align: center;
+  margin-bottom: 18px;
+  padding: 8px;
+  border-top: 1px solid rgba(200,160,96,0.3);
+  border-bottom: 1px solid rgba(200,160,96,0.3);
+}
+
+/* ===========================
+   記事カード（短冊風）
+   =========================== */
+a.onsen-post-card {
+  display: block;
+  background: linear-gradient(to right, #0d1e35, #0f2040);
+  border: 1px solid rgba(200, 160, 96, 0.25);
+  border-left: 3px solid #c8a060;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s, border-left-color 0.2s;
+  position: relative;
+}
+
+a.onsen-post-card::after {
+  content: '☽';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(200, 160, 96, 0.2);
+  font-size: 1.5rem;
+}
+
+a.onsen-post-card:hover {
+  background: linear-gradient(to right, #122540, #142850);
+  border-left-color: #f0d090;
+}
+
+.onsen-card-title {
+  font-size: 1.05rem;
+  color: #e8d8b8;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.onsen-card-date {
+  font-size: 0.8rem;
+  color: #5a6a7a;
+  white-space: nowrap;
+  margin-left: 12px;
+}
+
+.onsen-card-excerpt {
+  font-size: 0.88rem;
+  color: #7a8a9a;
+  margin: 0 0 10px;
+  line-height: 1.65;
+}
+
+.onsen-card-meta { font-size: 0.82rem; color: #5a6a7a; }
+
+/* ===========================
+   タグ
+   =========================== */
+.onsen-tag {
+  display: inline-block;
+  font-size: 0.74rem;
+  padding: 2px 8px;
+  border: 1px solid rgba(200, 160, 96, 0.35);
+  color: #c8a060;
+  margin: 2px;
+  border-radius: 2px;
+}
+
+.onsen-tag-filter {
+  background: rgba(13, 30, 53, 0.8);
+  border: 1px solid rgba(200,160,96,0.2);
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.onsen-tag-filter-heading {
+  font-size: 0.78rem;
+  color: #7a8a9a;
+  letter-spacing: 0.25em;
+  margin-bottom: 10px;
+}
+
+button[data-tag-btn] {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.78rem;
+  padding: 3px 10px;
+  border: 1px solid rgba(200,160,96,0.35);
+  background: transparent;
+  color: #c8a060;
+  border-radius: 2px;
+}
+
+button[data-tag-btn]:hover,
+button[data-tag-btn].active {
+  background: rgba(200, 160, 96, 0.2);
+  border-color: #c8a060;
+  color: #f0d090;
+}
+
+/* ===========================
+   記事本文
+   =========================== */
+.post-content h1 {
+  font-size: 1.6rem;
+  color: #f0d090;
+  text-align: center;
+  margin-top: 32px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.post-content h1::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #c8a060, transparent);
+  margin-top: 10px;
+}
+
+.post-content h2 {
+  font-size: 1.2rem;
+  color: #c8d8e8;
+  margin-top: 28px;
+  padding-left: 12px;
+  border-left: 2px solid rgba(168, 200, 232, 0.6);
+}
+
+.post-content h3 {
+  font-size: 1rem;
+  color: #c8a060;
+  margin-top: 22px;
+  letter-spacing: 0.06em;
+}
+
+.post-content p { line-height: 1.95; color: #c8c0b0; margin: 0 0 16px; }
+
+.post-content ul,
+.post-content ol {
+  padding-left: 24px;
+  color: #b8b0a0;
+  line-height: 1.95;
+}
+
+.post-content li { margin-bottom: 6px; }
+
+/* ===========================
+   記事タイトル
+   =========================== */
+.onsen-post-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #f0d090;
+  letter-spacing: 0.08em;
+  text-align: center;
+  margin: 0 0 14px;
+  line-height: 1.4;
+  text-shadow: 0 0 16px rgba(240,208,144,0.3);
+}
+
+.onsen-post-meta {
+  font-size: 0.88rem;
+  color: #7a8a9a;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+/* ===========================
+   前後ナビ
+   =========================== */
+.post-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 28px 0;
+}
+
+a.onsen-nav-card {
+  display: block;
+  background: rgba(13, 30, 53, 0.8);
+  border: 1px solid rgba(200, 160, 96, 0.25);
+  padding: 14px;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+a.onsen-nav-card:hover { background: rgba(18, 38, 66, 0.9); }
+
+.onsen-nav-label { font-size: 0.75rem; color: #7a8a9a; margin-bottom: 6px; letter-spacing: 0.1em; }
+.onsen-nav-title { font-size: 0.9rem; color: #e8d8b8; font-weight: 600; margin-bottom: 4px; }
+.onsen-nav-date  { font-size: 0.78rem; color: #5a6a7a; }
+
+/* ===========================
+   ボタン
+   =========================== */
+.onsen-button {
+  display: inline-block;
+  padding: 10px 28px;
+  background: transparent;
+  color: #c8a060;
+  font-family: inherit;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  border: 1px solid #c8a060;
+  cursor: pointer;
+}
+
+.onsen-button:hover { background: rgba(200, 160, 96, 0.15); color: #f0d090; }
+
+/* ===========================
+   著者パネル
+   =========================== */
+.onsen-author-panel {
+  background: rgba(13, 30, 53, 0.8);
+  border: 1px solid rgba(200,160,96,0.25);
+  border-top: 2px solid #c8a060;
+  padding: 16px;
+  text-align: center;
+  margin-bottom: 28px;
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   フッター
+   =========================== */
+.onsen-footer {
+  margin-top: 32px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #3a4a5a;
+  letter-spacing: 0.15em;
+  position: relative;
+}
+
+.onsen-footer::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(200,160,96,0.3), transparent);
+  margin-bottom: 14px;
+}
+
+/* ===========================
+   非表示
+   =========================== */
+.onsen-hidden { display: none !important; }

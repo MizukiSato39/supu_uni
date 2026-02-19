@@ -22,7 +22,7 @@ const ROOT      = path.resolve(process.cwd());
 const CONTENT   = path.join(ROOT, 'content');
 const TEMPLATES = path.join(ROOT, 'templates');
 const PUBLIC    = path.join(ROOT, 'public');
-const DIST      = path.join(ROOT, 'dist');
+const DIST      = path.join(ROOT, 'docs');
 
 // ===========================
 //  Frontmatter パーサー

@@ -1,0 +1,413 @@
+/* ===========================
+   スプリング☆ユニバース
+   ACADEMY LOG - ブルアカ風UIスタイル
+   =========================== */
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', 'Yu Gothic', sans-serif;
+  background-color: #071524;
+  background-image:
+    linear-gradient(180deg, #071524 0%, #0a1e35 50%, #071524 100%),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 60px,
+      rgba(74, 158, 255, 0.025) 60px,
+      rgba(74, 158, 255, 0.025) 61px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 60px,
+      rgba(74, 158, 255, 0.025) 60px,
+      rgba(74, 158, 255, 0.025) 61px
+    );
+  color: #d0e8ff;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===========================
+   コンテナ
+   =========================== */
+.academy-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===========================
+   ヘッダー
+   =========================== */
+.academy-header {
+  background: linear-gradient(90deg, rgba(10, 30, 60, 0.95), rgba(15, 40, 80, 0.95));
+  border-bottom: 2px solid #1a5aaa;
+  padding: 14px 24px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%);
+}
+
+.academy-header::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #4a9eff, #1a5aaa, #4a9eff);
+}
+
+.academy-site-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #7ac8ff;
+  text-transform: uppercase;
+}
+
+.academy-nav a {
+  color: #4a9eff;
+  text-decoration: none;
+  font-size: 0.82rem;
+  border: 1px solid rgba(74, 158, 255, 0.4);
+  padding: 4px 12px;
+  letter-spacing: 0.08em;
+}
+
+.academy-nav a:hover {
+  background: rgba(74, 158, 255, 0.1);
+  border-color: #4a9eff;
+}
+
+/* ===========================
+   ブレッドクラム
+   =========================== */
+.academy-breadcrumb {
+  font-size: 0.82rem;
+  color: #4a6a8a;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+
+.academy-breadcrumb a { color: #4a9eff; text-decoration: none; }
+.academy-breadcrumb a:hover { color: #7ac8ff; }
+.academy-sep { margin: 0 8px; color: #2a4a6a; }
+
+/* ===========================
+   ブログヘッダー（学籍ファイル風）
+   =========================== */
+.academy-blog-header {
+  background: rgba(10, 30, 60, 0.9);
+  border: 1px solid rgba(74, 158, 255, 0.3);
+  padding: 24px;
+  margin-bottom: 24px;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);
+}
+
+/* 四隅の角の装飾 */
+.academy-blog-header::before,
+.academy-blog-header::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+}
+
+.academy-blog-header::before {
+  top: 6px; left: 6px;
+  border-top: 2px solid #4a9eff;
+  border-left: 2px solid #4a9eff;
+}
+
+.academy-blog-header::after {
+  top: 6px; right: 22px;
+  border-top: 2px solid #4a9eff;
+  border-right: 2px solid #4a9eff;
+}
+
+.academy-blog-emoji { font-size: 3rem; margin-bottom: 10px; display: block; }
+
+.academy-blog-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #7ac8ff;
+  letter-spacing: 0.05em;
+  margin: 0 0 8px;
+  text-shadow: 0 0 20px rgba(74, 158, 255, 0.5);
+  line-height: 1.3;
+}
+
+.academy-blog-desc {
+  font-size: 0.95rem;
+  color: #8aaccc;
+  margin: 0 0 12px;
+  line-height: 1.65;
+}
+
+.academy-blog-meta { font-size: 0.85rem; color: #4a6a8a; margin: 0 0 14px; }
+
+.academy-divider {
+  border: none;
+  border-top: 1px solid rgba(74, 158, 255, 0.2);
+  margin: 14px 0;
+}
+
+.academy-stats { font-size: 0.9rem; color: #6a8aaa; }
+.academy-accent { color: #4a9eff; font-weight: 700; }
+
+/* ===========================
+   セクション
+   =========================== */
+.academy-section { margin-bottom: 24px; }
+
+.academy-section-heading {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: #4a9eff;
+  border-left: 3px solid #4a9eff;
+  padding-left: 10px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+/* ===========================
+   記事カード（UIパネル風）
+   =========================== */
+a.academy-post-card {
+  display: block;
+  background: rgba(10, 28, 55, 0.8);
+  border: 1px solid rgba(74, 158, 255, 0.2);
+  border-left: 3px solid rgba(74, 158, 255, 0.5);
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s, border-left-color 0.15s;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
+}
+
+a.academy-post-card:hover {
+  background: rgba(15, 38, 75, 0.9);
+  border-left-color: #4a9eff;
+  box-shadow: 0 0 12px rgba(74, 158, 255, 0.15);
+}
+
+.academy-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #c0dcff;
+  margin-bottom: 6px;
+  line-height: 1.45;
+}
+
+.academy-card-date {
+  font-size: 0.78rem;
+  color: #3a5a7a;
+  white-space: nowrap;
+  margin-left: 12px;
+}
+
+.academy-card-excerpt {
+  font-size: 0.87rem;
+  color: #7a9abb;
+  margin: 0 0 10px;
+  line-height: 1.6;
+}
+
+.academy-card-meta { font-size: 0.8rem; color: #4a6a8a; }
+
+/* ===========================
+   タグ
+   =========================== */
+.academy-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  padding: 2px 7px;
+  border: 1px solid rgba(74, 158, 255, 0.35);
+  color: #4a9eff;
+  margin: 2px;
+  background: rgba(74, 158, 255, 0.07);
+  letter-spacing: 0.05em;
+}
+
+.academy-tag-filter {
+  background: rgba(8, 22, 45, 0.9);
+  border: 1px solid rgba(74, 158, 255, 0.2);
+  padding: 12px 16px;
+  margin-bottom: 18px;
+}
+
+.academy-tag-filter-heading {
+  font-size: 0.75rem;
+  color: #4a6a8a;
+  letter-spacing: 0.25em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+button[data-tag-btn] {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.75rem;
+  padding: 3px 9px;
+  border: 1px solid rgba(74, 158, 255, 0.3);
+  background: transparent;
+  color: #4a9eff;
+  letter-spacing: 0.05em;
+}
+
+button[data-tag-btn]:hover,
+button[data-tag-btn].active {
+  background: rgba(74, 158, 255, 0.15);
+  border-color: #4a9eff;
+  color: #7ac8ff;
+}
+
+/* ===========================
+   記事本文
+   =========================== */
+.post-content h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #7ac8ff;
+  margin-top: 32px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(74, 158, 255, 0.3);
+  text-shadow: 0 0 12px rgba(74,158,255,0.3);
+}
+
+.post-content h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #5ab0ff;
+  margin-top: 26px;
+  padding-left: 10px;
+  border-left: 3px solid rgba(74, 158, 255, 0.5);
+}
+
+.post-content h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4a9eff;
+  margin-top: 22px;
+  letter-spacing: 0.05em;
+}
+
+.post-content p { line-height: 1.85; color: #a0bccc; margin: 0 0 14px; }
+
+.post-content ul,
+.post-content ol {
+  padding-left: 22px;
+  color: #8aacbb;
+  line-height: 1.85;
+}
+
+.post-content li { margin-bottom: 5px; }
+
+/* ===========================
+   記事タイトル
+   =========================== */
+.academy-post-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #7ac8ff;
+  letter-spacing: 0.04em;
+  margin: 0 0 12px;
+  line-height: 1.35;
+  text-shadow: 0 0 16px rgba(74,158,255,0.35);
+}
+
+.academy-post-meta {
+  font-size: 0.88rem;
+  color: #4a6a8a;
+  margin-bottom: 16px;
+}
+
+/* ===========================
+   前後ナビ
+   =========================== */
+.post-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+a.academy-nav-card {
+  display: block;
+  background: rgba(10, 28, 55, 0.8);
+  border: 1px solid rgba(74, 158, 255, 0.2);
+  border-top: 2px solid rgba(74, 158, 255, 0.4);
+  padding: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+a.academy-nav-card:hover { background: rgba(15, 38, 75, 0.9); }
+
+.academy-nav-label { font-size: 0.72rem; color: #3a5a7a; margin-bottom: 5px; letter-spacing: 0.1em; }
+.academy-nav-title { font-size: 0.88rem; color: #a0ccee; font-weight: 600; margin-bottom: 4px; }
+.academy-nav-date  { font-size: 0.76rem; color: #3a5a7a; }
+
+/* ===========================
+   ボタン
+   =========================== */
+.academy-button {
+  display: inline-block;
+  padding: 10px 26px;
+  background: rgba(74, 158, 255, 0.15);
+  color: #4a9eff;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border: 1px solid rgba(74, 158, 255, 0.5);
+  cursor: pointer;
+  clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+}
+
+.academy-button:hover {
+  background: rgba(74, 158, 255, 0.25);
+  color: #7ac8ff;
+  border-color: #4a9eff;
+}
+
+/* ===========================
+   著者パネル
+   =========================== */
+.academy-author-panel {
+  background: rgba(10, 28, 55, 0.9);
+  border: 1px solid rgba(74, 158, 255, 0.2);
+  border-top: 2px solid rgba(74, 158, 255, 0.5);
+  padding: 14px;
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+  color: #8aaccc;
+}
+
+/* ===========================
+   フッター
+   =========================== */
+.academy-footer {
+  margin-top: 28px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(74, 158, 255, 0.15);
+  text-align: center;
+  font-size: 0.8rem;
+  color: #2a4a6a;
+  letter-spacing: 0.15em;
+}
+
+/* ===========================
+   非表示
+   =========================== */
+.academy-hidden { display: none !important; }
